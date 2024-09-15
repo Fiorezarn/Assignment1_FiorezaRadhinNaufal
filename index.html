@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portfolio Reza</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="container mx-auto lg:px-24 p-4">
+      <nav
+        class="flex items-center justify-between lg:bg-[#573DBB] p-4 lg:rounded-full"
+      >
+        <ul class="lg:flex gap-[120px] hidden lg:block mx-auto">
+          <li><a href="/" class="text-lg text-white font-bold">Home</a></li>
+          <li>
+            <a href="/about" class="text-lg text-white font-bold">About</a>
+          </li>
+          <li>
+            <a href="/services" class="text-lg text-white font-bold"
+              >Services</a
+            >
+          </li>
+          <li><a href="/" class="text-2xl font-bold">Logo</a></li>
+          <li>
+            <a href="/portfolio" class="text-lg text-white font-bold"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="/contact" class="text-lg text-white font-bold">Contact</a>
+          </li>
+          <li>
+            <a href="/skills" class="text-lg text-white font-bold">Skills</a>
+          </li>
+        </ul>
+
+        <!-- Mobile -->
+        <a href="/" class="text-2xl font-bold lg:hidden">Logo</a>
+        <button
+          onclick="toggleMenu()"
+          class="bg-[#573DBB] text-white px-4 py-2 rounded-md lg:hidden"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div
+          class="bg-[#573DBB] fixed z-10 md:hidden left-0 top-0 w-[60%] h-screen ease-in-out duration-500 transition-all hidden"
+          id="menu"
+        >
+          <ul>
+            <li
+              class="p-4 border-b rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
+            >
+              <a href="/" class="font-bold text-white">Home</a>
+            </li>
+            <li
+              class="p-4 border-b rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
+            >
+              <a href="/about" class="font-bold text-white">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="lg:px-24 lg:grid lg:grid-cols-2 h-full">
+        <div class="my-auto grid gap-6 px-10">
+          <h1 class="text-3xl lg:text-5xl font-bold">
+            I'm <span class="text-[#573DBB]">Fioreza R N</span>, <br />Web
+            Developer
+          </h1>
+          <p class="text-lg text-justify">
+            I'm a passionate web developer and designer with a strong focus on
+            creating simple, yet powerful solutions. I'm always looking for new
+            ways to improve my skills and stay up-to-date with the latest trends
+            and technologies.
+          </p>
+          <div class="mt-4 flex gap-2">
+            <a
+              class="bg-black text-white px-5 py-2 rounded-md font-bold"
+              href="/about"
+              >About</a
+            >
+            <a
+              class="bg-[#573DBB] text-white px-5 py-2 rounded-md font-bold"
+              href="/cv"
+              >Download CV</a
+            >
+          </div>
+        </div>
+        <div class="mt-4 bg-[#573DBB] rounded-xl lg:mx-auto">
+          <img class="lg-w-1/2" src="./assets/reza.png" alt="Profile Picture" />
+        </div>
+        <div
+          class="absolute top-1/2 right-20 flex flex-col items-center space-y-4 text-[#573DBB]"
+        >
+          <span class="text-sm text-gray-600 rotate-90 mb-10"
+            >Follow me on:</span
+          >
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </section>
+
+      <section class="bg-[#573DBB] mt-10 mx-auto">
+        <div class="lg:px-24 w-full">
+          <h2
+            class="font-bold text-white text-3xl leading-tight tracking-wide text-center"
+          >
+            About Me
+          </h2>
+          <div class="grid grid-cols-2 p-6 gap-x-12">
+            <div class="mx-auto grid place-items-center">
+              <img
+                class="lg:w-1/2 rounded-xl"
+                src="./assets/Foto Linked in.jpeg"
+                alt="Profile Picture"
+              />
+            </div>
+            <div class="my-auto grid gap-6 px-10">
+              <p class="text-xl leading-relaxed tracking-wide text-justify">
+                I'm a passionate web developer and designer with a strong focus
+                on creating simple, yet powerful solutions. I'm always looking
+                for new ways to improve my skills and stay up-to-date with the
+                latest trends and technologies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white mt-10 p-6">
+        <div class="lg:px-24">
+          <h2 class="font-bold text-3xl text-center text-black">My Skills</h2>
+          <div class="flex items-center justify-center mt-6">
+            <div
+              class="relative flex items-center bg-[#573DBB] rounded-full overflow-hidden"
+            >
+              <button
+                class="switch-button px-4 py-2 text-white rounded-full w-1/2"
+                id="frontEndBtn"
+              >
+                Front End
+              </button>
+              <button
+                class="switch-button px-4 py-2 text-white rounded-full w-1/2"
+                id="backEndBtn"
+              >
+                Back End
+              </button>
+              <div
+                class="absolute top-0 left-0 w-1/2 h-full bg-white rounded-full transition-transform"
+                id="indicator"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-4 gap-4 mt-10 place-items-center"
+            id="front-end"
+          >
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img class="w-[100px]" src="./assets/html.png" alt="HTML" />
+            </div>
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img class="w-[100px]" src="./assets/css-3.png" alt="CSS" />
+            </div>
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img class="w-[100px]" src="./assets/js.png" alt="JavaScript" />
+            </div>
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img class="w-[100px]" src="./assets/react.png" alt="React" />
+            </div>
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img
+                class="w-[100px]"
+                src="./assets/bootstrap.png"
+                alt="Bootstrap"
+              />
+            </div>
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img
+                class="w-[100px]"
+                src="./assets/tailwind.png"
+                alt="Tailwind CSS"
+              />
+            </div>
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img class="w-[100px]" src="./assets/sass.png" alt="SASS" />
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-4 gap-4 mt-10 place-items-center hidden"
+            id="back-end"
+          >
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img class="w-[100px]" src="./assets/laravel.png" alt="Laravel" />
+            </div>
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img class="w-[100px]" src="./assets/mysql.png" alt="MySQL" />
+            </div>
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img class="w-[100px]" src="./assets/php.png" alt="PHP" />
+            </div>
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img
+                class="w-[100px]"
+                src="./assets/postgree.png"
+                alt="PostgreSQL"
+              />
+            </div>
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img
+                class="w-[100px]"
+                src="./assets/typescript.png"
+                alt="TypeScript"
+              />
+            </div>
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img
+                class="w-[100px]"
+                src="./assets/oracle.png"
+                alt="PostgreSQL"
+              />
+            </div>
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img
+                class="w-[100px]"
+                src="./assets/nodejs.png"
+                alt="PostgreSQL"
+              />
+            </div>
+            <div
+              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+            >
+              <img
+                class="w-[100px]"
+                src="./assets/nest js.png"
+                alt="PostgreSQL"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lg:px-24 h-full">
+        <div class="my-auto grid gap-6 px-10">
+          <h2 class="font-bold text-3xl text-center text-black">My Projects</h2>
+          <div class="grid grid-cols-1 gap-4 mt-10">
+            <div
+              class="bg-white/30 p-4 rounded-lg flex justify-center items-center"
+            >
+              <img
+                class="w-[300px] rounded-lg"
+                src="./assets/project1.png"
+                alt="Project 1"
+              />
+            </div>
+            <div
+              class="bg-white/30 p-4 rounded-lg flex justify-center items-center"
+            >
+              <img
+                class="w-[300px] rounded-lg"
+                src="./assets/project2.png"
+                alt="Project 2"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-white text-center py-4">
+      <p>&copy; 2024 Fioreza R N. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("hidden");
+      }
+
+      const frontEndBtn = document.getElementById("frontEndBtn");
+      const backEndBtn = document.getElementById("backEndBtn");
+      const frontEnd = document.getElementById("front-end");
+      const backEnd = document.getElementById("back-end");
+      const indicator = document.getElementById("indicator");
+
+      frontEndBtn.addEventListener("click", () => {
+        indicator.style.transform = "translateX(0)";
+        frontEnd.classList.remove("hidden");
+        backEnd.classList.add("hidden");
+      });
+
+      backEndBtn.addEventListener("click", () => {
+        indicator.style.transform = "translateX(100%)";
+        frontEnd.classList.add("hidden");
+        backEnd.classList.remove("hidden");
+      });
+    </script>
+  </body>
+</html>
