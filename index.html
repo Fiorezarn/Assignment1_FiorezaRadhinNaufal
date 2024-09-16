@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,23 +12,32 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="theme.css" />
   </head>
-  <body>
+  <body class="theme-1">
     <header class="container mx-auto lg:px-24 p-4">
       <nav
         class="flex items-center justify-between lg:bg-[#573DBB] p-4 lg:rounded-full"
       >
-        <ul class="lg:flex gap-[120px] hidden lg:block mx-auto">
+        <ul class="lg:flex w-[90%] justify-between hidden lg:block mx-auto">
           <li><a href="/" class="text-lg text-white font-bold">Home</a></li>
           <li>
             <a href="/about" class="text-lg text-white font-bold">About</a>
           </li>
           <li>
-            <a href="/services" class="text-lg text-white font-bold"
-              >Services</a
+            <a href="#experience" class="text-lg text-white font-bold"
+              >Experience</a
             >
           </li>
-          <li><a href="/" class="text-2xl font-bold">Logo</a></li>
+          <li>
+            <button
+              id="theme-button"
+              onclick="toggleTheme()"
+              class="text-2xl font-bold"
+            >
+              Logo
+            </button>
+          </li>
           <li>
             <a href="/portfolio" class="text-lg text-white font-bold"
               >Portfolio</a
@@ -111,12 +120,14 @@
         </div>
       </section>
 
-      <section class="bg-[#573DBB] mt-10 mx-auto">
+      <section class="bg-[#573DBB] mt-10 mx-auto py-16">
         <div class="lg:px-24 w-full">
-          <h2
-            class="font-bold text-white text-3xl leading-tight tracking-wide text-center"
-          >
+          <h2 class="text-center text-white text-3xl font-bold mb-6 relative">
             About Me
+            <!-- Decorative line -->
+            <span
+              class="absolute left-1/2 transform -translate-x-1/2 mt-2 block h-1 w-20 bg-white rounded"
+            ></span>
           </h2>
           <div class="grid grid-cols-2 p-6 gap-x-12">
             <div class="mx-auto grid place-items-center">
@@ -279,28 +290,235 @@
         </div>
       </section>
 
-      <section class="lg:px-24 h-full">
-        <div class="my-auto grid gap-6 px-10">
-          <h2 class="font-bold text-3xl text-center text-black">My Projects</h2>
-          <div class="grid grid-cols-1 gap-4 mt-10">
+      <section class="lg:px-24 h-full bg-[#573DBB] py-16">
+        <h2 class="text-center text-white text-3xl font-bold mb-6 relative">
+          Portofolio
+          <span
+            class="absolute left-1/2 transform -translate-x-1/2 mt-2 block h-1 w-20 bg-white rounded"
+          ></span>
+        </h2>
+        <div class="lg:grid lg:grid-cols-3 mt-10">
+          <div class="p-4 flex justify-center items-center relative group">
+            <img
+              class="w-[400px] h-[400px] object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-50"
+              src="./assets/incentive.png"
+              alt="Project 1"
+            />
             <div
-              class="bg-white/30 p-4 rounded-lg flex justify-center items-center"
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
             >
-              <img
-                class="w-[300px] rounded-lg"
-                src="./assets/project1.png"
-                alt="Project 1"
-              />
+              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
+              <p class="text-white text-sm mt-2">
+                A platform for managing incentives.
+              </p>
+              <button
+                class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+              >
+                See More
+              </button>
             </div>
+          </div>
+          <div class="p-4 flex justify-center items-center relative group">
+            <img
+              class="w-[400px] h-[400px] object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-50"
+              src="./assets/Batary.png"
+              alt="Project 1"
+            />
             <div
-              class="bg-white/30 p-4 rounded-lg flex justify-center items-center"
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
             >
-              <img
-                class="w-[300px] rounded-lg"
-                src="./assets/project2.png"
-                alt="Project 2"
-              />
+              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
+              <p class="text-white text-sm mt-2">
+                A platform for managing incentives.
+              </p>
+              <button
+                class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+              >
+                See More
+              </button>
             </div>
+          </div>
+          <div class="p-4 flex justify-center items-center">
+            <img
+              class="w-[400px] h-[400px] object-cover"
+              src="./assets/nextflix.png"
+              alt="Project 2"
+            />
+          </div>
+          <div class="p-4 flex justify-center items-center">
+            <img
+              class="w-[400px] h-[400px] object-cover"
+              src="./assets/portofolio.png"
+              alt="Project 2"
+            />
+          </div>
+          <div class="p-4 flex justify-center items-center">
+            <img
+              class="w-[400px] h-[400px] object-cover"
+              src="./assets/milenalstuff.jpg"
+              alt="Project 2"
+            />
+          </div>
+          <div class="p-4 flex justify-center items-center">
+            <img
+              class="w-[400px] h-[400px] object-cover"
+              src="./assets/moneta.png"
+              alt="Project 2"
+            />
+          </div>
+          <div class="p-4 flex justify-center items-center">
+            <img
+              class="w-[400px] h-[400px] object-cover"
+              src="./assets/kalkulator.png"
+              alt="Project 2"
+            />
+          </div>
+          <div class="p-4 flex justify-center items-center">
+            <img
+              class="w-[400px] h-[400px] object-cover"
+              src="./assets/asthabrata.png"
+              alt="Project 2"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white py-16" id="experience">
+        <div class="container mx-auto px-6 lg:px-24">
+          <h2 class="text-center text-gray-900 text-3xl font-bold mb-12">
+            Work Experience
+          </h2>
+
+          <div class="relative border-l-2 border-gray-300">
+            <!-- Item 1 -->
+            <div class="mb-10 ml-8">
+              <span
+                class="absolute w-6 h-6 bg-yellow-500 rounded-full mt-1.5 -left-3.5"
+              ></span>
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Senior Python Developer
+                </h3>
+                <span class="text-sm text-gray-600">2021</span>
+              </div>
+              <p class="text-gray-600 mb-2">Scottch, Toledo</p>
+              <p class="text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eu turpis molestie, dictum est a, mattis tellus.
+              </p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="mb-10 ml-8">
+              <span
+                class="absolute w-6 h-6 bg-yellow-500 rounded-full mt-1.5 -left-3.5"
+              ></span>
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Python Developer
+                </h3>
+                <span class="text-sm text-gray-600">2021</span>
+              </div>
+              <p class="text-gray-600 mb-2">AutoGrid Systems, Naperville</p>
+              <p class="text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eu turpis molestie, dictum est a, mattis tellus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="lg:px-24 h-full bg-[#573DBB] py-16">
+        <h1 class="text-3xl font-bold text-center text-white mb-12">
+          Contact Me
+        </h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Left Side -->
+          <div>
+            <h1 class="font-bold md:text-center text-center lg:text-left">
+              <span class="text-purple-400">Let`s chat</span>
+              <br />
+              Tell me about your <br />
+              project.
+            </h1>
+            <p class="mt-6 text-center lg:text-left md:text-center">
+              Let`s create something together✨
+            </p>
+            <div
+              class="mt-10 mb-10 px-4 w-64 py-1 backdrop-blur-sm bg-white/30 rounded-xl flex gap-4 mx-auto lg:mx-0"
+            >
+              <Icon class="text-3xl mt-3" icon="skill-icons:gmail-light" />
+              <div class="my-1">
+                <p class="text-gray-100">Mail me at:</p>
+                <a href="mailto:fiorezarn@gmail.com">fiorezarn@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side - Form -->
+          <div class="bg-white w-full lg:h-full rounded-xl p-8 shadow-lg">
+            <form action="#" method="POST" class="space-y-6">
+              <!-- Name Field -->
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+
+              <!-- Email Field -->
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+
+              <!-- Message Field -->
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div>
+                <button
+                  type="submit"
+                  class="w-full inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -333,6 +551,17 @@
         frontEnd.classList.add("hidden");
         backEnd.classList.remove("hidden");
       });
+
+      function toggleTheme() {
+        const themeButton = document.getElementById("theme-button");
+        var body = document.body;
+
+        if (body.classList.value === "theme-1") {
+          body.classList.replace("theme-1", "theme-2");
+        } else {
+          body.classList.replace("theme-2", "theme-1");
+        }
+      }
     </script>
   </body>
 </html>
