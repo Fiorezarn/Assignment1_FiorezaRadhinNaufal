@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="theme.css" />
   </head>
   <body class="theme-1">
-    <header class="container mx-auto lg:px-24 p-4">
+    <header class="mx-auto lg:px-24 p-4">
       <nav
-        class="flex items-center justify-between lg:bg-[#573DBB] p-4 lg:rounded-full"
+        class="flex items-center justify-between p-4 rounded-full lg:rounded-full"
       >
         <ul class="lg:flex w-[90%] justify-between hidden lg:block mx-auto">
           <li><a href="/" class="text-lg text-white font-bold">Home</a></li>
           <li>
-            <a href="/about" class="text-lg text-white font-bold">About</a>
+            <a href="#about" class="text-lg text-white font-bold">About</a>
           </li>
           <li>
             <a href="#experience" class="text-lg text-white font-bold"
@@ -30,37 +30,25 @@
             >
           </li>
           <li>
-            <button
-              id="theme-button"
-              onclick="toggleTheme()"
-              class="text-2xl font-bold"
-            >
-              Logo
+            <button id="theme-button" class="text-3xl font-bold rounded-full">
+              <i class="fa-solid fa-moon"></i>
             </button>
           </li>
           <li>
-            <a href="/portfolio" class="text-lg text-white font-bold"
+            <a href="#portfolio" class="text-lg text-white font-bold"
               >Portfolio</a
             >
           </li>
           <li>
-            <a href="/contact" class="text-lg text-white font-bold">Contact</a>
+            <a href="#contact" class="text-lg text-white font-bold">Contact</a>
           </li>
           <li>
-            <a href="/skills" class="text-lg text-white font-bold">Skills</a>
+            <a href="#skills" class="text-lg text-white font-bold">Skills</a>
           </li>
         </ul>
 
-        <!-- Mobile -->
-        <a href="/" class="text-2xl font-bold lg:hidden">Logo</a>
-        <button
-          onclick="toggleMenu()"
-          class="bg-[#573DBB] text-white px-4 py-2 rounded-md lg:hidden"
-        >
-          <i class="fa-solid fa-bars"></i>
-        </button>
         <div
-          class="bg-[#573DBB] fixed z-10 md:hidden left-0 top-0 w-[60%] h-screen ease-in-out duration-500 transition-all hidden"
+          class="bg-[#573DBB] fixed z-10 left-0 top-0 w-[60%] h-screen ease-in-out duration-500 transition-transform -translate-x-full"
           id="menu"
         >
           <ul>
@@ -72,29 +60,60 @@
             <li
               class="p-4 border-b rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
             >
-              <a href="/about" class="font-bold text-white">About</a>
+              <a href="#about" class="font-bold text-white">About</a>
+            </li>
+            <li
+              class="p-4 border-b rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
+            >
+              <a href="#experience" class="font-bold text-white">Experience</a>
+            </li>
+          </ul>
+          <ul>
+            <li
+              class="p-4 border-b rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
+            >
+              <a href="/" class="font-bold text-white">Portofolio</a>
+            </li>
+            <li
+              class="p-4 border-b rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
+            >
+              <a href="#about" class="font-bold text-white">Contact</a>
+            </li>
+            <li
+              class="p-4 border-b rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
+            >
+              <a href="#experience" class="font-bold text-white">Skills</a>
             </li>
           </ul>
         </div>
+
+        <a href="/" class="text-2xl font-bold lg:hidden">Logo</a>
+        <button
+          onclick="toggleMenu()"
+          class="bg-[#573DBB] text-white px-4 py-2 rounded-md lg:hidden"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </nav>
     </header>
 
     <main>
-      <section class="lg:px-24 lg:grid lg:grid-cols-2 h-full">
+      <!-- section1 -->
+      <section class="section1 lg:px-24 lg:grid lg:grid-cols-2 h-full">
         <div class="my-auto grid gap-6 px-10">
-          <h1 class="text-3xl lg:text-5xl font-bold">
-            I'm <span class="text-[#573DBB]">Fioreza R N</span>, <br />Web
+          <h1 class="title lg:text-5xl font-poppins font-bold">
+            I'm <span class="text-[#573DBB] name">Fioreza R N</span>, <br />Web
             Developer
           </h1>
-          <p class="text-lg text-justify">
-            I'm a passionate web developer and designer with a strong focus on
-            creating simple, yet powerful solutions. I'm always looking for new
-            ways to improve my skills and stay up-to-date with the latest trends
-            and technologies.
+          <p class="text-lg text-justify font-serif">
+            Welcome to my website, a fullstack developer who focuses on creating
+            simple yet powerful solutions. This website was created to share my
+            experience and knowledge in the field of fullstack development. I
+            also hope to help you find the information you need.
           </p>
           <div class="mt-4 flex gap-2">
             <a
-              class="bg-black text-white px-5 py-2 rounded-md font-bold"
+              class="btn-about text-white px-5 py-2 rounded-md font-bold"
               href="/about"
               >About</a
             >
@@ -109,36 +128,36 @@
           <img class="lg-w-1/2" src="./assets/reza.png" alt="Profile Picture" />
         </div>
         <div
-          class="absolute top-1/2 right-20 flex flex-col items-center space-y-4 text-[#573DBB]"
+          class="sosmed lg:absolute top-1/2 right-20 flex flex-col items-center space-y-4"
         >
-          <span class="text-sm text-gray-600 rotate-90 mb-10"
-            >Follow me on:</span
-          >
+          <span class="text-sm rotate-90 mb-10">Follow me on:</span>
           <a href="#"><i class="fa-brands fa-facebook"></i></a>
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
           <a href="#"><i class="fa-brands fa-linkedin"></i></a>
         </div>
       </section>
 
-      <section class="bg-[#573DBB] mt-10 mx-auto py-16">
+      <!-- section2 -->
+      <section class="section2 mt-10 mx-auto py-16" id="about">
         <div class="lg:px-24 w-full">
-          <h2 class="text-center text-white text-3xl font-bold mb-6 relative">
+          <h2
+            class="text-center font-['Poppins'] text-white text-3xl font-bold mb-6 relative"
+          >
             About Me
-            <!-- Decorative line -->
             <span
               class="absolute left-1/2 transform -translate-x-1/2 mt-2 block h-1 w-20 bg-white rounded"
             ></span>
           </h2>
-          <div class="grid grid-cols-2 p-6 gap-x-12">
+          <div class="grid lg:grid-cols-2 p-6 gap-x-12">
             <div class="mx-auto grid place-items-center">
               <img
-                class="lg:w-1/2 rounded-xl"
-                src="./assets/Foto Linked in.jpeg"
+                class="rounded-xl"
+                src="./assets/about.jpg"
                 alt="Profile Picture"
               />
             </div>
             <div class="my-auto grid gap-6 px-10">
-              <p class="text-xl leading-relaxed tracking-wide text-justify">
+              <p class="text-xl text-white font-serif text-justify">
                 I'm a passionate web developer and designer with a strong focus
                 on creating simple, yet powerful solutions. I'm always looking
                 for new ways to improve my skills and stay up-to-date with the
@@ -149,77 +168,82 @@
         </div>
       </section>
 
-      <section class="bg-white mt-10 p-6">
+      <!-- section3 -->
+      <section class="section3 mt-10 py-16" id="skills">
         <div class="lg:px-24">
-          <h2 class="font-bold text-3xl text-center text-black">My Skills</h2>
-          <div class="flex items-center justify-center mt-6">
-            <div
-              class="relative flex items-center bg-[#573DBB] rounded-full overflow-hidden"
+          <h2 class="font-['Poppins'] text-3xl font-bold mb-6 relative">
+            My Skills
+          </h2>
+          <div class="flex items-center mt-6">
+            <ul
+              class="flex flex-wrap w-full text-sm font-medium text-center text-gray-500 border-b border-black"
             >
-              <button
-                class="switch-button px-4 py-2 text-white rounded-full w-1/2"
-                id="frontEndBtn"
-              >
-                Front End
-              </button>
-              <button
-                class="switch-button px-4 py-2 text-white rounded-full w-1/2"
-                id="backEndBtn"
-              >
-                Back End
-              </button>
-              <div
-                class="absolute top-0 left-0 w-1/2 h-full bg-white rounded-full transition-transform"
-                id="indicator"
-              ></div>
-            </div>
+              <li class="me-2">
+                <button
+                  aria-current="page"
+                  class="switch-button inline-block px-4 py-2 text-white bg-[#573DBB] rounded-t-lg"
+                  id="frontEndBtn"
+                >
+                  Front End
+                </button>
+              </li>
+              <li class="me-2">
+                <button
+                  class="switch-button inline-block px-4 py-2 rounded-t-lg bg-gray-100 text-gray-500"
+                  id="backEndBtn"
+                >
+                  Back End
+                </button>
+              </li>
+            </ul>
           </div>
+
           <div
             class="grid grid-cols-4 gap-4 mt-10 place-items-center"
             id="front-end"
           >
             <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
             >
-              <img class="w-[100px]" src="./assets/html.png" alt="HTML" />
+              <img class="w-20 h-20" src="./assets/html.png" alt="HTML" />
             </div>
             <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
             >
-              <img class="w-[100px]" src="./assets/css-3.png" alt="CSS" />
+              <img class="w-20 h-20" src="./assets/css-3.png" alt="CSS" />
             </div>
             <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
             >
-              <img class="w-[100px]" src="./assets/js.png" alt="JavaScript" />
+              <img class="w-20 h-20" src="./assets/js.png" alt="JavaScript" />
             </div>
             <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
             >
-              <img class="w-[100px]" src="./assets/react.png" alt="React" />
+              <img class="w-20 h-20" src="./assets/react.png" alt="React" />
             </div>
             <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
             >
               <img
-                class="w-[100px]"
+                class="w-20 h-20"
                 src="./assets/bootstrap.png"
                 alt="Bootstrap"
               />
             </div>
             <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
             >
               <img
-                class="w-[100px]"
+                class="w-20 h-20"
                 src="./assets/tailwind.png"
                 alt="Tailwind CSS"
               />
             </div>
             <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
+              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
             >
-              <img class="w-[100px]" src="./assets/sass.png" alt="SASS" />
+              <img class="w-20 h-20" src="./assets/sass.png" alt="SASS" />
             </div>
           </div>
           <div
@@ -229,23 +253,23 @@
             <div
               class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
             >
-              <img class="w-[100px]" src="./assets/laravel.png" alt="Laravel" />
+              <img class="w-20 h-20" src="./assets/laravel.png" alt="Laravel" />
             </div>
             <div
               class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
             >
-              <img class="w-[100px]" src="./assets/mysql.png" alt="MySQL" />
+              <img class="w-20 h-20" src="./assets/mysql.png" alt="MySQL" />
             </div>
             <div
               class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
             >
-              <img class="w-[100px]" src="./assets/php.png" alt="PHP" />
+              <img class="w-20 h-20" src="./assets/php.png" alt="PHP" />
             </div>
             <div
               class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
             >
               <img
-                class="w-[100px]"
+                class="w-20 h-20"
                 src="./assets/postgree.png"
                 alt="PostgreSQL"
               />
@@ -254,7 +278,7 @@
               class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
             >
               <img
-                class="w-[100px]"
+                class="w-20 h-20"
                 src="./assets/typescript.png"
                 alt="TypeScript"
               />
@@ -263,7 +287,7 @@
               class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
             >
               <img
-                class="w-[100px]"
+                class="w-20 h-20"
                 src="./assets/oracle.png"
                 alt="PostgreSQL"
               />
@@ -272,7 +296,7 @@
               class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
             >
               <img
-                class="w-[100px]"
+                class="w-20 h-20"
                 src="./assets/nodejs.png"
                 alt="PostgreSQL"
               />
@@ -281,7 +305,7 @@
               class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
             >
               <img
-                class="w-[100px]"
+                class="w-20 h-20"
                 src="./assets/nest js.png"
                 alt="PostgreSQL"
               />
@@ -290,7 +314,11 @@
         </div>
       </section>
 
-      <section class="lg:px-24 h-full bg-[#573DBB] py-16">
+      <!-- section4 -->
+      <section
+        class="section4 lg:px-24 h-full bg-[#573DBB] py-16"
+        id="portfolio"
+      >
         <h2 class="text-center text-white text-3xl font-bold mb-6 relative">
           Portofolio
           <span
@@ -338,188 +366,253 @@
               </button>
             </div>
           </div>
-          <div class="p-4 flex justify-center items-center">
+          <div class="p-4 flex justify-center items-center relative group">
             <img
-              class="w-[400px] h-[400px] object-cover"
+              class="w-[400px] h-[400px] object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-50"
               src="./assets/nextflix.png"
-              alt="Project 2"
+              alt="Project 1"
             />
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
+            >
+              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
+              <p class="text-white text-sm mt-2">
+                A platform for managing incentives.
+              </p>
+              <button
+                class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+              >
+                See More
+              </button>
+            </div>
           </div>
-          <div class="p-4 flex justify-center items-center">
+          <div class="p-4 flex justify-center items-center relative group">
             <img
-              class="w-[400px] h-[400px] object-cover"
+              class="w-[400px] h-[400px] object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-50"
               src="./assets/portofolio.png"
-              alt="Project 2"
+              alt="Project 1"
             />
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
+            >
+              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
+              <p class="text-white text-sm mt-2">
+                A platform for managing incentives.
+              </p>
+              <button
+                class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+              >
+                See More
+              </button>
+            </div>
           </div>
-          <div class="p-4 flex justify-center items-center">
+          <div class="p-4 flex justify-center items-center relative group">
             <img
-              class="w-[400px] h-[400px] object-cover"
+              class="w-[400px] h-[400px] object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-50"
               src="./assets/milenalstuff.jpg"
-              alt="Project 2"
+              alt="Project 1"
             />
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
+            >
+              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
+              <p class="text-white text-sm mt-2">
+                A platform for managing incentives.
+              </p>
+              <button
+                class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+              >
+                See More
+              </button>
+            </div>
           </div>
-          <div class="p-4 flex justify-center items-center">
+          <div class="p-4 flex justify-center items-center relative group">
             <img
-              class="w-[400px] h-[400px] object-cover"
+              class="w-[400px] h-[400px] object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-50"
               src="./assets/moneta.png"
-              alt="Project 2"
+              alt="Project 1"
             />
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
+            >
+              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
+              <p class="text-white text-sm mt-2">
+                A platform for managing incentives.
+              </p>
+              <button
+                class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+              >
+                See More
+              </button>
+            </div>
           </div>
-          <div class="p-4 flex justify-center items-center">
+          <!-- additional card -->
+          <div
+            class="p-4 flex justify-center items-center relative group hidden additional-card"
+          >
             <img
-              class="w-[400px] h-[400px] object-cover"
+              class="w-[400px] h-[400px] object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-50"
               src="./assets/kalkulator.png"
-              alt="Project 2"
+              alt="Project 1"
             />
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
+            >
+              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
+              <p class="text-white text-sm mt-2">
+                A platform for managing incentives.
+              </p>
+              <button
+                class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+              >
+                See More
+              </button>
+            </div>
           </div>
-          <div class="p-4 flex justify-center items-center">
+          <div
+            class="p-4 flex justify-center items-center relative group hidden additional-card"
+          >
             <img
-              class="w-[400px] h-[400px] object-cover"
+              class="w-[400px] h-[400px] object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-50"
               src="./assets/asthabrata.png"
-              alt="Project 2"
+              alt="Project 1"
             />
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
+            >
+              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
+              <p class="text-white text-sm mt-2">
+                A platform for managing incentives.
+              </p>
+              <button
+                class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+              >
+                See More
+              </button>
+            </div>
           </div>
+        </div>
+        <div class="text-center mt-8">
+          <button
+            id="view-more-btn"
+            class="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+          >
+            View More
+          </button>
         </div>
       </section>
 
-      <section class="bg-white py-16" id="experience">
+      <!-- section5 -->
+      <section class="section5 py-16" id="experience">
         <div class="container mx-auto px-6 lg:px-24">
-          <h2 class="text-center text-gray-900 text-3xl font-bold mb-12">
+          <h2
+            class="text-center font-['Poppins'] text-white text-3xl font-bold mb-6 relative"
+          >
             Work Experience
+            <span
+              class="line absolute left-1/2 transform -translate-x-1/2 mt-2 block h-1 w-20 rounded"
+            ></span>
           </h2>
-
           <div class="relative border-l-2 border-gray-300">
             <!-- Item 1 -->
             <div class="mb-10 ml-8">
               <span
-                class="absolute w-6 h-6 bg-yellow-500 rounded-full mt-1.5 -left-3.5"
+                class="absolute w-6 h-6 bg-[#573DBB] rounded-full mt-1.5 shadow-[0_0_10px_rgba(87,61,187,0.7)] -left-3.5"
               ></span>
               <div class="flex justify-between items-center mb-1">
-                <h3 class="text-lg font-semibold text-gray-900">
-                  Senior Python Developer
-                </h3>
-                <span class="text-sm text-gray-600">2021</span>
+                <h3 class="text-lg font-semibold">PT PHINCON</h3>
+                <span class="text-sm font-semibold">Feb 2024 - Aug 2024</span>
               </div>
-              <p class="text-gray-600 mb-2">Scottch, Toledo</p>
-              <p class="text-gray-700">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus.
+              <p class="mb-2">Back End Developer Intern</p>
+              <p>
+                I have completed key features, including a QA module for admin
+                performance evaluation, a time management system for employee
+                shifts and schedules, a calling list management tool, and a
+                recording list module for displaying recordings and annotations.
               </p>
             </div>
 
             <!-- Item 2 -->
             <div class="mb-10 ml-8">
               <span
-                class="absolute w-6 h-6 bg-yellow-500 rounded-full mt-1.5 -left-3.5"
+                class="absolute w-6 h-6 bg-[#573DBB] rounded-full mt-1.5 shadow-[0_0_10px_rgba(87,61,187,0.7)] -left-3.5"
               ></span>
               <div class="flex justify-between items-center mb-1">
-                <h3 class="text-lg font-semibold text-gray-900">
-                  Python Developer
-                </h3>
-                <span class="text-sm text-gray-600">2021</span>
+                <h3 class="text-lg font-semibold">PT Trans Retail Indonesia</h3>
+                <span class="text-sm font-semibold">Aug 2023 - Dec 2023</span>
               </div>
-              <p class="text-gray-600 mb-2">AutoGrid Systems, Naperville</p>
-              <p class="text-gray-700">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus.
+              <p class="mb-2">Sofware Developer Intern</p>
+              <p>
+                I have successfully created a customer data website to record
+                customers, an incentive website for employees, stores, and
+                brands, and a cycle count website to count stock in stores. all
+                developed using the Laravel framework.
               </p>
             </div>
           </div>
         </div>
       </section>
-      <section class="lg:px-24 h-full bg-[#573DBB] py-16">
-        <h1 class="text-3xl font-bold text-center text-white mb-12">
+
+      <!-- section6 -->
+      <section class="section6 lg:px-24 h-full py-16 text-white" id="contact">
+        <h2
+          class="text-center font-['Poppins'] text-white text-3xl font-bold mb-6 relative"
+        >
           Contact Me
-        </h1>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <!-- Left Side -->
-          <div>
-            <h1 class="font-bold md:text-center text-center lg:text-left">
-              <span class="text-purple-400">Let`s chat</span>
-              <br />
-              Tell me about your <br />
-              project.
-            </h1>
-            <p class="mt-6 text-center lg:text-left md:text-center">
-              Let`s create something together✨
-            </p>
-            <div
-              class="mt-10 mb-10 px-4 w-64 py-1 backdrop-blur-sm bg-white/30 rounded-xl flex gap-4 mx-auto lg:mx-0"
-            >
-              <Icon class="text-3xl mt-3" icon="skill-icons:gmail-light" />
-              <div class="my-1">
-                <p class="text-gray-100">Mail me at:</p>
-                <a href="mailto:fiorezarn@gmail.com">fiorezarn@gmail.com</a>
-              </div>
+          <span
+            class="absolute left-1/2 transform -translate-x-1/2 mt-2 block h-1 w-20 bg-white rounded"
+          ></span>
+        </h2>
+        <div
+          class="flex flex-wrap gap-4 justify-center items-start mx-auto max-w-[600px] mt-20"
+        >
+          <!-- Email -->
+          <div
+            class="flex items-center px-4 backdrop-blur-sm bg-white/30 rounded-xl"
+          >
+            <div class="p-4">
+              <i class="fa-regular fa-envelope text-3xl"></i>
             </div>
+            <a href="mailto:fioreza@email.com" class="text-lg"
+              >fioreza@email.com</a
+            >
           </div>
 
-          <!-- Right Side - Form -->
-          <div class="bg-white w-full lg:h-full rounded-xl p-8 shadow-lg">
-            <form action="#" method="POST" class="space-y-6">
-              <!-- Name Field -->
-              <div>
-                <label
-                  for="name"
-                  class="block text-sm font-medium text-gray-700"
-                  >Name</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-
-              <!-- Email Field -->
-              <div>
-                <label
-                  for="email"
-                  class="block text-sm font-medium text-gray-700"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  placeholder="you@example.com"
-                  required
-                />
-              </div>
-
-              <!-- Message Field -->
-              <div>
-                <label
-                  for="message"
-                  class="block text-sm font-medium text-gray-700"
-                  >Message</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  placeholder="Tell me about your project..."
-                  required
-                ></textarea>
-              </div>
-
-              <!-- Submit Button -->
-              <div>
-                <button
-                  type="submit"
-                  class="w-full inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Send Message
-                </button>
-              </div>
-            </form>
+          <!-- Phone -->
+          <div
+            class="flex items-center px-4 backdrop-blur-sm bg-white/30 rounded-xl"
+          >
+            <div class="p-4">
+              <i class="fa-solid fa-phone text-3xl"></i>
+            </div>
+            <a href="tel:+12015550124" class="text-lg">+62 851 8281 0339</a>
           </div>
+
+          <!-- Location -->
+          <div
+            class="flex items-center px-4 backdrop-blur-sm bg-white/30 rounded-xl lg:col-span-2 lg:row-span-2"
+          >
+            <div class="p-4">
+              <i class="fa-solid fa-location-dot text-3xl"></i>
+            </div>
+            <p class="text-lg">Pamulang, Tangerang Selatan</p>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-6 mt-12">
+          <a href="#" class="text-gray-400 hover:text-white"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="text-gray-400 hover:text-white"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="text-gray-400 hover:text-white"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" class="text-gray-400 hover:text-white"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
         </div>
       </section>
     </main>
@@ -528,40 +621,6 @@
       <p>&copy; 2024 Fioreza R N. All rights reserved.</p>
     </footer>
 
-    <script>
-      function toggleMenu() {
-        var menu = document.getElementById("menu");
-        menu.classList.toggle("hidden");
-      }
-
-      const frontEndBtn = document.getElementById("frontEndBtn");
-      const backEndBtn = document.getElementById("backEndBtn");
-      const frontEnd = document.getElementById("front-end");
-      const backEnd = document.getElementById("back-end");
-      const indicator = document.getElementById("indicator");
-
-      frontEndBtn.addEventListener("click", () => {
-        indicator.style.transform = "translateX(0)";
-        frontEnd.classList.remove("hidden");
-        backEnd.classList.add("hidden");
-      });
-
-      backEndBtn.addEventListener("click", () => {
-        indicator.style.transform = "translateX(100%)";
-        frontEnd.classList.add("hidden");
-        backEnd.classList.remove("hidden");
-      });
-
-      function toggleTheme() {
-        const themeButton = document.getElementById("theme-button");
-        var body = document.body;
-
-        if (body.classList.value === "theme-1") {
-          body.classList.replace("theme-1", "theme-2");
-        } else {
-          body.classList.replace("theme-2", "theme-1");
-        }
-      }
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
