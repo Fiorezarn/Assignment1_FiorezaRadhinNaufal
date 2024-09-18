@@ -33,6 +33,14 @@
   background-color: #181720;
 }
 
+.theme-1 .section3 .card-skill {
+  background-color: rgba(87, 61, 187, 0.25);
+}
+
+.theme-1 .section3 .card-skill h1 {
+  color: black;
+}
+
 .theme-1 .section4 {
   background-color: #573dbb;
 }
@@ -94,8 +102,20 @@
   color: white;
 }
 
+.theme-2 .section3 .card-skill {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.theme-2 .section3 .card-skill h1 {
+  color: white;
+}
+
 .theme-2 .section3 .line {
   background-color: white;
+}
+
+.theme-2 .section3 .tab {
+  border-color: white !important;
 }
 
 .theme-2 .section4 {

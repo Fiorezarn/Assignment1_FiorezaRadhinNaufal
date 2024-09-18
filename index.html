@@ -31,7 +31,7 @@
           </li>
           <li>
             <button id="theme-button" class="text-3xl font-bold rounded-full">
-              <i class="fa-solid fa-moon"></i>
+              <img src="./assets/darkicon.svg" class="w-8 h-8" alt="darkicon" />
             </button>
           </li>
           <li>
@@ -86,8 +86,9 @@
             </li>
           </ul>
         </div>
-
-        <a href="/" class="text-2xl font-bold lg:hidden">Logo</a>
+        <button href="/" id="theme-button" class="text-2xl font-bold lg:hidden">
+          <img src="./assets/darkicon.svg" class="w-8 h-8" alt="darkicon" />
+        </button>
         <button
           onclick="toggleMenu()"
           class="bg-[#573DBB] text-white px-4 py-2 rounded-md lg:hidden"
@@ -101,7 +102,7 @@
       <!-- section1 -->
       <section class="section1 lg:px-24 lg:grid lg:grid-cols-2 h-full">
         <div class="my-auto grid gap-6 px-10">
-          <h1 class="title lg:text-5xl font-poppins font-bold">
+          <h1 class="title lg:text-5xl font-poppins font-bold text-4xl">
             I'm <span class="text-[#573DBB] name">Fioreza R N</span>, <br />Web
             Developer
           </h1>
@@ -111,7 +112,7 @@
             experience and knowledge in the field of fullstack development. I
             also hope to help you find the information you need.
           </p>
-          <div class="mt-4 flex gap-2">
+          <div class="mt-4 flex gap-2 mx-auto lg:mx-0">
             <a
               class="btn-about text-white px-5 py-2 rounded-md font-bold"
               href="/about"
@@ -123,17 +124,19 @@
               >Download CV</a
             >
           </div>
-        </div>
-        <div class="mt-4 bg-[#573DBB] rounded-xl lg:mx-auto">
-          <img class="lg-w-1/2" src="./assets/reza.png" alt="Profile Picture" />
+          <div
+            class="sosmed text-center justify-center lg:justify-start lg:text-left flex gap-2"
+          >
+            <span class="text-sm mb-10">Follow me on:</span>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
         </div>
         <div
-          class="sosmed lg:absolute top-1/2 right-20 flex flex-col items-center space-y-4"
+          class="mt-2 bg-[#573DBB] w-[70%] mx-auto text-center justify-center rounded-xl lg:mx-auto"
         >
-          <span class="text-sm rotate-90 mb-10">Follow me on:</span>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <img class="mx-auto" src="./assets/reza.png" alt="Profile Picture" />
         </div>
       </section>
 
@@ -170,13 +173,13 @@
 
       <!-- section3 -->
       <section class="section3 mt-10 py-16" id="skills">
-        <div class="lg:px-24">
+        <div class="lg:px-24 px-6">
           <h2 class="font-['Poppins'] text-3xl font-bold mb-6 relative">
             My Skills
           </h2>
           <div class="flex items-center mt-6">
             <ul
-              class="flex flex-wrap w-full text-sm font-medium text-center text-gray-500 border-b border-black"
+              class="tab flex flex-wrap w-full text-sm font-medium text-center text-gray-500 border-b border-black"
             >
               <li class="me-2">
                 <button
@@ -199,118 +202,13 @@
           </div>
 
           <div
-            class="grid grid-cols-4 gap-4 mt-10 place-items-center"
+            class="flex flex-wrap justify-center max-w-[800px] mx-auto gap-6 mt-10"
             id="front-end"
-          >
-            <div
-              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
-            >
-              <img class="w-20 h-20" src="./assets/html.png" alt="HTML" />
-            </div>
-            <div
-              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
-            >
-              <img class="w-20 h-20" src="./assets/css-3.png" alt="CSS" />
-            </div>
-            <div
-              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
-            >
-              <img class="w-20 h-20" src="./assets/js.png" alt="JavaScript" />
-            </div>
-            <div
-              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
-            >
-              <img class="w-20 h-20" src="./assets/react.png" alt="React" />
-            </div>
-            <div
-              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
-            >
-              <img
-                class="w-20 h-20"
-                src="./assets/bootstrap.png"
-                alt="Bootstrap"
-              />
-            </div>
-            <div
-              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
-            >
-              <img
-                class="w-20 h-20"
-                src="./assets/tailwind.png"
-                alt="Tailwind CSS"
-              />
-            </div>
-            <div
-              class="backdrop-blur-sm p-4 rounded-full flex justify-center items-center"
-            >
-              <img class="w-20 h-20" src="./assets/sass.png" alt="SASS" />
-            </div>
-          </div>
+          ></div>
           <div
-            class="grid grid-cols-4 gap-4 mt-10 place-items-center hidden"
+            class="flex flex-wrap justify-center max-w-5xl mx-auto gap-6 mt-10 hidden"
             id="back-end"
-          >
-            <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
-            >
-              <img class="w-20 h-20" src="./assets/laravel.png" alt="Laravel" />
-            </div>
-            <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
-            >
-              <img class="w-20 h-20" src="./assets/mysql.png" alt="MySQL" />
-            </div>
-            <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
-            >
-              <img class="w-20 h-20" src="./assets/php.png" alt="PHP" />
-            </div>
-            <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
-            >
-              <img
-                class="w-20 h-20"
-                src="./assets/postgree.png"
-                alt="PostgreSQL"
-              />
-            </div>
-            <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
-            >
-              <img
-                class="w-20 h-20"
-                src="./assets/typescript.png"
-                alt="TypeScript"
-              />
-            </div>
-            <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
-            >
-              <img
-                class="w-20 h-20"
-                src="./assets/oracle.png"
-                alt="PostgreSQL"
-              />
-            </div>
-            <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
-            >
-              <img
-                class="w-20 h-20"
-                src="./assets/nodejs.png"
-                alt="PostgreSQL"
-              />
-            </div>
-            <div
-              class="backdrop-blur-sm bg-white/30 p-4 rounded-full flex justify-center items-center"
-            >
-              <img
-                class="w-20 h-20"
-                src="./assets/nest js.png"
-                alt="PostgreSQL"
-              />
-            </div>
-          </div>
+          ></div>
         </div>
       </section>
 
@@ -325,7 +223,7 @@
             class="absolute left-1/2 transform -translate-x-1/2 mt-2 block h-1 w-20 bg-white rounded"
           ></span>
         </h2>
-        <div class="lg:grid lg:grid-cols-3 mt-10">
+        <div class="lg:grid lg:grid-cols-3 mt-10" id="card-projects">
           <div class="p-4 flex justify-center items-center relative group">
             <img
               class="w-[400px] h-[400px] object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-50"
@@ -340,9 +238,9 @@
                 A platform for managing incentives.
               </p>
               <button
-                class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+                class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition cursor-not-allowed"
               >
-                See More
+                <i class="fa-regular fa-eye-slash"></i>
               </button>
             </div>
           </div>
@@ -355,15 +253,17 @@
             <div
               class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
             >
-              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
+              <h1 class="text-white text-lg font-bold">Batary Apps</h1>
               <p class="text-white text-sm mt-2">
-                A platform for managing incentives.
+                A platform for show restorant apps.
               </p>
-              <button
+              <a
+                target="_blank"
+                href="https://github.com/Fiorezarn/Batary-Apps.git"
                 class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
               >
-                See More
-              </button>
+                <i class="fa-regular fa-eye"></i>
+              </a>
             </div>
           </div>
           <div class="p-4 flex justify-center items-center relative group">
@@ -375,15 +275,17 @@
             <div
               class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
             >
-              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
+              <h1 class="text-white text-lg font-bold">Nextflix</h1>
               <p class="text-white text-sm mt-2">
-                A platform for managing incentives.
+                A platform for managing movies and tv shows.
               </p>
-              <button
+              <a
+                target="_blank"
+                href="https://github.com/Fiorezarn/Nextflix-webpack.git"
                 class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
               >
-                See More
-              </button>
+                <i class="fa-regular fa-eye"></i>
+              </a>
             </div>
           </div>
           <div class="p-4 flex justify-center items-center relative group">
@@ -395,15 +297,15 @@
             <div
               class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
             >
-              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
-              <p class="text-white text-sm mt-2">
-                A platform for managing incentives.
-              </p>
-              <button
+              <h1 class="text-white text-lg font-bold">Portofolio Web</h1>
+              <p class="text-white text-sm mt-2">My portfolio website.</p>
+              <a
+                target="_blank"
+                href="https://github.com/Fiorezarn/Website-Portfolio.git"
                 class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
               >
-                See More
-              </button>
+                <i class="fa-regular fa-eye"></i>
+              </a>
             </div>
           </div>
           <div class="p-4 flex justify-center items-center relative group">
@@ -415,15 +317,17 @@
             <div
               class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
             >
-              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
+              <h1 class="text-white text-lg font-bold">Milenial Stuff</h1>
               <p class="text-white text-sm mt-2">
-                A platform for managing incentives.
+                A platform e-commerce for selling stuff.
               </p>
-              <button
+              <a
+                target="_blank"
+                href="https://github.com/Fiorezarn/MilenialStuff.id.git"
                 class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
               >
-                See More
-              </button>
+                <i class="fa-regular fa-eye"></i>
+              </a>
             </div>
           </div>
           <div class="p-4 flex justify-center items-center relative group">
@@ -435,15 +339,16 @@
             <div
               class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
             >
-              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
+              <h1 class="text-white text-lg font-bold">Moneta</h1>
               <p class="text-white text-sm mt-2">
-                A platform for managing incentives.
+                A platform for managing financial transactions.
               </p>
-              <button
+              <a
+                href="https://github.com/c23-m4001"
                 class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
               >
-                See More
-              </button>
+                <i class="fa-regular fa-eye"></i>
+              </a>
             </div>
           </div>
           <!-- additional card -->
@@ -458,15 +363,15 @@
             <div
               class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
             >
-              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
-              <p class="text-white text-sm mt-2">
-                A platform for managing incentives.
-              </p>
-              <button
+              <h1 class="text-white text-lg font-bold">Calculator</h1>
+              <p class="text-white text-sm mt-2">A simple calculator.</p>
+              <a
+                target="_blank"
+                href="https://github.com/Fiorezarn/bc_phincon_2.git"
                 class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
               >
-                See More
-              </button>
+                <i class="fa-regular fa-eye"></i>
+              </a>
             </div>
           </div>
           <div
@@ -480,15 +385,17 @@
             <div
               class="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition duration-500 ease-in-out"
             >
-              <h1 class="text-white text-lg font-bold">Incentive Project</h1>
+              <h1 class="text-white text-lg font-bold">Astha Brata</h1>
               <p class="text-white text-sm mt-2">
-                A platform for managing incentives.
+                Company profile for Astha Brata.
               </p>
-              <button
+              <a
+                target="_blank"
+                href="https://github.com/Fiorezarn/asthabrata.git"
                 class="mt-4 text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
               >
-                See More
-              </button>
+                <i class="fa-regular fa-eye"></i>
+              </a>
             </div>
           </div>
         </div>

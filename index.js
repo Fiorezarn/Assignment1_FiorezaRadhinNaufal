@@ -46,10 +46,10 @@ themeButton.addEventListener("click", function () {
 
   if (body.classList.contains("theme-1")) {
     body.classList.replace("theme-1", "theme-2");
-    this.innerHTML = `<i class="fa-regular fa-sun text-white"></i>`;
+    this.innerHTML = `<img src="./assets/lighticon.svg" class="w-8 h-8" alt="lighticon" />`;
   } else {
     body.classList.replace("theme-2", "theme-1");
-    this.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+    this.innerHTML = `<img src="./assets/darkicon.svg" class="w-8 h-8" alt="darkicon" />`;
   }
 });
 
@@ -63,8 +63,61 @@ viewMoreBtn.addEventListener("click", function () {
     hiddenCards.forEach((card) => {
       card.classList.remove("hidden");
     });
-    this.textContent = "See Less";
+    this.textContent = "View Less";
   }
 
   isExpanded = !isExpanded;
 });
+
+const frontEndList = [
+  { name: "HTML", imgSrc: "./assets/html.png" },
+  { name: "CSS", imgSrc: "./assets/css-3.png" },
+  { name: "JavaScript", imgSrc: "./assets/js.png" },
+  { name: "React", imgSrc: "./assets/react.png" },
+  { name: "Bootstrap", imgSrc: "./assets/bootstrap.png" },
+  { name: "Tailwind CSS", imgSrc: "./assets/tailwind.png" },
+  { name: "SASS", imgSrc: "./assets/sass.png" },
+];
+
+const backEndList = [
+  { name: "Laravel", imgSrc: "./assets/laravel.png" },
+  { name: "MySQL", imgSrc: "./assets/mysql.png" },
+  { name: "PHP", imgSrc: "./assets/php.png" },
+  { name: "PostgreSQL", imgSrc: "./assets/postgree.png" },
+  { name: "TypeScript", imgSrc: "./assets/typescript.png" },
+  { name: "Oracle", imgSrc: "./assets/oracle.png" },
+  { name: "Node.js", imgSrc: "./assets/nodejs.png" },
+  { name: "Nest.js", imgSrc: "./assets/nest js.png" },
+];
+
+function showCardSkill(list, idContainer) {
+  const container = document.getElementById(idContainer);
+  list.forEach((tech) => {
+    const techDiv = document.createElement("div");
+    techDiv.classList.add(
+      "card-skill",
+      "backdrop-blur-sm",
+      "p-7",
+      "rounded",
+      "flex",
+      "flex-col",
+      "items-center"
+    );
+
+    const img = document.createElement("img");
+    img.classList.add("w-20", "h-20");
+    img.src = tech.imgSrc;
+    img.alt = tech.name;
+
+    const h1 = document.createElement("h1");
+    h1.classList.add("text-center", "text-lg", "font-bold", "mt-4");
+    h1.textContent = tech.name;
+
+    techDiv.appendChild(img);
+    techDiv.appendChild(h1);
+    container.appendChild(techDiv);
+  });
+}
+
+showCardSkill(frontEndList, "front-end");
+showCardSkill(backEndList, "back-end");
