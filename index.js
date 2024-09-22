@@ -1,23 +1,62 @@
 function toggleMenu() {
-  var menu = document.getElementById("menu");
+  const menu = document.getElementById("menu");
+  const hamburger = document.getElementById("hamburger");
 
   if (menu.classList.contains("-translate-x-full")) {
-    menu.classList.remove("-translate-x-full");
-    menu.classList.add("translate-x-0");
+    menu.classList.replace("-translate-x-full", "translate-x-0");
+    hamburger.innerHTML = `<i class="fa-solid fa-x"></i>`;
   } else {
-    menu.classList.remove("translate-x-0");
-    menu.classList.add("-translate-x-full");
+    menu.classList.replace("translate-x-0", "-translate-x-full");
+    hamburger.innerHTML = `<i class="fa-solid fa-bars"></i>`;
   }
 }
+
+document.addEventListener("click", function (event) {
+  var menu = document.getElementById("menu");
+  var isMenuButton = event.target.closest("button");
+
+  if (
+    !menu.contains(event.target) &&
+    !isMenuButton &&
+    menu.classList.contains("translate-x-0")
+  ) {
+    toggleMenu();
+  }
+});
+
+// Close menu on window resize
+window.addEventListener("resize", function () {
+  if (window.innerWidth >= 1024) {
+    var menu = document.getElementById("menu");
+    if (menu.classList.contains("translate-x-0")) {
+      toggleMenu();
+    }
+  }
+});
 
 const frontEndBtn = document.getElementById("frontEndBtn");
 const backEndBtn = document.getElementById("backEndBtn");
 const frontEnd = document.getElementById("front-end");
 const backEnd = document.getElementById("back-end");
 const themeButton = document.getElementById("theme-button");
+const themeButtonMobile = document.getElementById("theme-button-mobile");
 const viewMoreBtn = document.getElementById("view-more-btn");
 const hiddenCards = document.querySelectorAll(".additional-card");
+const body = document.body;
 let isExpanded = false;
+
+let lastScrollTop = 0;
+window.addEventListener("scroll", function () {
+  let scrollTop = document.documentElement.scrollTop;
+  const ontop = document.getElementById("on-top");
+
+  if (scrollTop > 300) {
+    ontop.classList.remove("hidden");
+  } else {
+    ontop.classList.add("hidden");
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
 
 frontEndBtn.addEventListener("click", () => {
   frontEnd.classList.remove("hidden");
@@ -41,9 +80,17 @@ backEndBtn.addEventListener("click", () => {
   frontEndBtn.classList.remove("bg-[#573DBB]", "text-white");
 });
 
-themeButton.addEventListener("click", function () {
-  var body = document.body;
+themeButtonMobile.addEventListener("click", function () {
+  if (body.classList.contains("theme-1")) {
+    body.classList.replace("theme-1", "theme-2");
+    this.innerHTML = `<img src="./assets/lighticon.svg" class="w-8 h-8" alt="lighticon" />`;
+  } else {
+    body.classList.replace("theme-2", "theme-1");
+    this.innerHTML = `<img src="./assets/darkicon.svg" class="w-8 h-8" alt="darkicon" />`;
+  }
+});
 
+themeButton.addEventListener("click", function () {
   if (body.classList.contains("theme-1")) {
     body.classList.replace("theme-1", "theme-2");
     this.innerHTML = `<img src="./assets/lighticon.svg" class="w-8 h-8" alt="lighticon" />`;

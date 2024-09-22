@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="theme.css" />
   </head>
   <body class="theme-1">
-    <header class="mx-auto lg:px-24 p-4">
+    <header class="mx-auto lg:px-24 p-4" id="top">
       <nav
         class="flex items-center justify-between p-4 rounded-full lg:rounded-full"
       >
@@ -86,11 +86,12 @@
             </li>
           </ul>
         </div>
-        <button href="/" id="theme-button" class="text-2xl font-bold lg:hidden">
+        <button id="theme-button-mobile" class="text-2xl font-bold lg:hidden">
           <img src="./assets/darkicon.svg" class="w-8 h-8" alt="darkicon" />
         </button>
         <button
           onclick="toggleMenu()"
+          id="hamburger"
           class="bg-[#573DBB] text-white px-4 py-2 rounded-md lg:hidden"
         >
           <i class="fa-solid fa-bars"></i>
@@ -99,51 +100,66 @@
     </header>
 
     <main>
-      <!-- section1 -->
-      <section
-        class="section1 lg:px-24 lg:grid lg:grid-cols-2 flex flex-col h-full"
+      <div
+        class="bg-[#bcb1e4] rounded-full fixed z-[9999] right-4 bottom-6 p-2 hidden"
+        id="on-top"
       >
-        <div class="my-auto grid gap-6 px-10 order-last lg:order-first">
-          <h1 class="title lg:text-5xl font-poppins font-bold text-4xl">
-            I'm <span class="text-[#573DBB] name">Fioreza R N</span>, <br />Web
-            Developer
-          </h1>
-          <p class="text-lg text-justify font-serif">
-            Welcome to my website, a fullstack developer who focuses on creating
-            simple yet powerful solutions. This website was created to share my
-            experience and knowledge in the field of fullstack development. I
-            also hope to help you find the information you need.
-          </p>
-          <div class="mt-4 flex gap-2 mx-auto lg:mx-0">
-            <a
-              class="btn-about text-white px-5 py-2 rounded-md font-bold"
-              href="/about"
-              >About</a
+        <a href="#top">
+          <i class="fa-solid fa-jet-fighter-up text-white text-2xl"></i>
+        </a>
+      </div>
+      <!-- section1 -->
+      <section class="section1 lg:px-24 lg:py-16">
+        <div
+          class="lg:grid lg:grid-cols-2 flex flex-col items-center justify-center h-full"
+        >
+          <div class="my-auto grid gap-6 px-10 order-last lg:order-first">
+            <h1 class="title lg:text-6xl font-poppins font-bold text-4xl">
+              I'm <span class="text-[#573DBB] name">Fioreza R N</span>,
+              <br />Web Developer
+            </h1>
+            <p class="text-lg text-justify font-serif">
+              Welcome to my website, a fullstack developer who focuses on
+              creating simple yet powerful solutions. This website was created
+              to share my experience and knowledge in the field of fullstack
+              development. I also hope to help you find the information you
+              need.
+            </p>
+            <div class="mt-4 flex gap-2 mx-auto lg:mx-0">
+              <a
+                class="btn-about text-white px-5 py-2 rounded-md font-bold"
+                href="/about"
+                >About</a
+              >
+              <a
+                class="bg-[#573DBB] text-white px-5 py-2 rounded-md font-bold"
+                href="/cv"
+                >Download CV</a
+              >
+            </div>
+            <div
+              class="sosmed text-center justify-center lg:justify-start lg:text-left flex gap-2"
             >
-            <a
-              class="bg-[#573DBB] text-white px-5 py-2 rounded-md font-bold"
-              href="/cv"
-              >Download CV</a
-            >
+              <span class="text-sm mb-10">Follow me on:</span>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
           </div>
           <div
-            class="sosmed text-center justify-center lg:justify-start lg:text-left flex gap-2"
+            class="mt-4 bg-[#573DBB] w-[75%] mx-auto text-center justify-center rounded-xl lg:mx-auto"
           >
-            <span class="text-sm mb-10">Follow me on:</span>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <img
+              class="mx-auto h-[550px] rounded-xl"
+              src="./assets/reza.png"
+              alt="Profile Picture"
+            />
           </div>
-        </div>
-        <div
-          class="mt-2 bg-[#573DBB] w-[70%] mx-auto text-center justify-center rounded-xl lg:mx-auto"
-        >
-          <img class="mx-auto" src="./assets/reza.png" alt="Profile Picture" />
         </div>
       </section>
 
       <!-- section2 -->
-      <section class="section2 mt-10 mx-auto py-16" id="about">
+      <section class="section2 mt-10 mx-auto py-16 h-screen" id="about">
         <div class="lg:px-24 w-full">
           <h2
             class="text-center font-['Poppins'] text-white text-3xl font-bold mb-6 relative"
@@ -153,7 +169,7 @@
               class="absolute left-1/2 transform -translate-x-1/2 mt-2 block h-1 w-20 bg-white rounded"
             ></span>
           </h2>
-          <div class="grid lg:grid-cols-2 p-6 gap-x-12">
+          <div class="grid lg:grid-cols-2 p-6 gap-12">
             <div class="mx-auto grid place-items-center">
               <img
                 class="rounded-xl"
@@ -174,7 +190,7 @@
       </section>
 
       <!-- section3 -->
-      <section class="section3 mt-10 py-16" id="skills">
+      <section class="section3 mt-10 py-16 lg:h-screen" id="skills">
         <div class="lg:px-24 px-6">
           <h2 class="font-['Poppins'] text-3xl font-bold mb-6 relative">
             My Skills
@@ -412,7 +428,7 @@
       </section>
 
       <!-- section5 -->
-      <section class="section5 py-16" id="experience">
+      <section class="section5 py-16 h-screen" id="experience">
         <div class="container mx-auto px-6 lg:px-24">
           <h2
             class="text-center font-['Poppins'] text-white text-3xl font-bold mb-6 relative"
