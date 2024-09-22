@@ -19,7 +19,10 @@
       <nav
         class="flex items-center justify-between p-4 rounded-full lg:rounded-full"
       >
-        <ul class="lg:flex w-[90%] justify-between hidden lg:block mx-auto">
+        <!-- desktop menu -->
+        <ul
+          class="lg:flex w-[90%] items-center justify-between hidden lg:block mx-auto"
+        >
           <li><a href="/" class="text-lg text-white font-bold">Home</a></li>
           <li>
             <a href="#about" class="text-lg text-white font-bold">About</a>
@@ -46,7 +49,7 @@
             <a href="#skills" class="text-lg text-white font-bold">Skills</a>
           </li>
         </ul>
-
+        <!-- mobile menu -->
         <div
           class="bg-[#573DBB] fixed z-10 left-0 top-0 w-[60%] h-screen ease-in-out duration-500 transition-transform -translate-x-full"
           id="menu"
@@ -94,7 +97,10 @@
           id="hamburger"
           class="bg-[#573DBB] text-white px-4 py-2 rounded-md lg:hidden"
         >
-          <i class="fa-solid fa-bars"></i>
+          <i
+            id="icon-menu"
+            class="fa-solid fa-bars text-2xl transition-transform duration-300 ease-in-out"
+          ></i>
         </button>
       </nav>
     </header>
@@ -159,7 +165,7 @@
       </section>
 
       <!-- section2 -->
-      <section class="section2 mt-10 mx-auto py-16 h-screen" id="about">
+      <section class="section2 mt-10 mx-auto py-20" id="about">
         <div class="lg:px-24 w-full">
           <h2
             class="text-center font-['Poppins'] text-white text-3xl font-bold mb-6 relative"
@@ -169,7 +175,7 @@
               class="absolute left-1/2 transform -translate-x-1/2 mt-2 block h-1 w-20 bg-white rounded"
             ></span>
           </h2>
-          <div class="grid lg:grid-cols-2 p-6 gap-12">
+          <div class="grid lg:grid-cols-2 p-6 gap-12 lg:mt-10">
             <div class="mx-auto grid place-items-center">
               <img
                 class="rounded-xl"

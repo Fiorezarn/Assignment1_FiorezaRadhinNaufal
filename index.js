@@ -1,13 +1,17 @@
 function toggleMenu() {
   const menu = document.getElementById("menu");
-  const hamburger = document.getElementById("hamburger");
+  const icon = document.getElementById("icon-menu");
 
   if (menu.classList.contains("-translate-x-full")) {
     menu.classList.replace("-translate-x-full", "translate-x-0");
-    hamburger.innerHTML = `<i class="fa-solid fa-x"></i>`;
+
+    icon.classList.replace("fa-bars", "fa-x");
+    icon.classList.add("rotate-180");
   } else {
     menu.classList.replace("translate-x-0", "-translate-x-full");
-    hamburger.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+
+    icon.classList.replace("fa-x", "fa-bars");
+    icon.classList.remove("rotate-180");
   }
 }
 
