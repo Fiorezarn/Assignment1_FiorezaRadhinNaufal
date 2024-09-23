@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth focus:scroll-auto">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Portfolio Reza</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icon.svg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -17,18 +19,30 @@
   <body class="theme-1">
     <header class="mx-auto lg:px-24 p-4" id="top">
       <nav
-        class="flex items-center justify-between p-4 rounded-full lg:rounded-full"
+        class="flex items-center justify-between px-8 py-4 lg:p-4 rounded-full lg:rounded-full"
       >
         <!-- desktop menu -->
         <ul
           class="lg:flex w-[90%] items-center justify-between hidden lg:block mx-auto"
         >
-          <li><a href="#top" class="text-lg text-white font-bold">Home</a></li>
           <li>
-            <a href="#about" class="text-lg text-white font-bold">About</a>
+            <a
+              href="#top"
+              class="text-lg text-white font-bold hover:bg-[#112D4E] duration-300 px-6 py-4 rounded-full"
+              >Home</a
+            >
           </li>
           <li>
-            <a href="#experience" class="text-lg text-white font-bold"
+            <a
+              href="#about"
+              class="text-lg text-white font-bold hover:bg-[#112D4E] duration-300 px-6 py-4 rounded-full"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#experience"
+              class="text-lg text-white font-bold hover:bg-[#112D4E] duration-300 px-6 py-4 rounded-full"
               >Experience</a
             >
           </li>
@@ -38,15 +52,25 @@
             </button>
           </li>
           <li>
-            <a href="#portfolio" class="text-lg text-white font-bold"
+            <a
+              href="#portfolio"
+              class="text-lg text-white font-bold hover:bg-[#112D4E] duration-300 px-6 py-4 rounded-full"
               >Portfolio</a
             >
           </li>
           <li>
-            <a href="#contact" class="text-lg text-white font-bold">Contact</a>
+            <a
+              href="#contact"
+              class="text-lg text-white font-bold hover:bg-[#112D4E] duration-300 px-6 py-4 rounded-full"
+              >Contact</a
+            >
           </li>
           <li>
-            <a href="#skills" class="text-lg text-white font-bold">Skills</a>
+            <a
+              href="#skills"
+              class="text-lg text-white font-bold hover:bg-[#112D4E] duration-300 px-6 py-4 rounded-full"
+              >Skills</a
+            >
           </li>
         </ul>
         <!-- mobile menu -->
@@ -56,34 +80,34 @@
         >
           <ul>
             <li
-              class="p-4 border-b rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
+              class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
             >
               <a href="#top" class="font-bold text-white">Home</a>
             </li>
             <li
-              class="p-4 border-b rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
+              class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
             >
               <a href="#about" class="font-bold text-white">About</a>
             </li>
             <li
-              class="p-4 border-b rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
+              class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
             >
               <a href="#experience" class="font-bold text-white">Experience</a>
             </li>
           </ul>
           <ul>
             <li
-              class="p-4 border-b rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
+              class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
             >
               <a href="#portfolio" class="font-bold text-white">Portofolio</a>
             </li>
             <li
-              class="p-4 border-b rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
+              class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
             >
               <a href="#contact" class="font-bold text-white">Contact</a>
             </li>
             <li
-              class="p-4 border-b rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
+              class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
             >
               <a href="#skills" class="font-bold text-white">Skills</a>
             </li>
@@ -106,6 +130,7 @@
     </header>
 
     <main>
+      <!-- navigation on top -->
       <div
         class="bg-[#bcb1e4] rounded-full fixed z-[9999] right-4 bottom-6 p-2 hidden"
         id="on-top"
@@ -119,19 +144,22 @@
         <div
           class="lg:grid lg:grid-cols-2 flex flex-col items-center justify-center h-full"
         >
-          <div class="my-auto mt-10 grid gap-6 px-10 order-last lg:order-first">
-            <h1 class="title lg:text-6xl font-poppins font-bold text-4xl">
+          <div
+            data-aos="fade-right"
+            class="my-auto mt-10 grid gap-6 px-10 order-last lg:order-first"
+          >
+            <h1 class="title lg:text-6xl font-['soehne'] font-bold text-3xl">
               I'm <span class="text-[#573DBB] name">Fioreza R N</span>, Web
               Developer
             </h1>
-            <p class="text-lg text-justify font-serif">
+            <p class="lg:text-xl text-lg text-justify font-['Roboto']">
               Welcome to my website, a fullstack developer who focuses on
               creating simple yet powerful solutions. This website was created
               to share my experience and knowledge in the field of fullstack
               development. I also hope to help you find the information you
               need.
             </p>
-            <div class="mt-4 flex gap-2 mx-auto lg:mx-0">
+            <div class="mt-4 flex gap-2 lg:mx-0">
               <a
                 class="btn-about text-white px-5 py-2 rounded-md font-bold"
                 href="/about"
@@ -144,7 +172,7 @@
               >
             </div>
             <div
-              class="sosmed text-center justify-center lg:justify-start lg:text-left flex gap-2"
+              class="sosmed text-center lg:justify-start lg:text-left flex gap-2"
             >
               <span class="text-sm mb-10">Follow me on:</span>
               <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -153,10 +181,11 @@
             </div>
           </div>
           <div
+            data-aos="fade-left"
             class="mt-4 bg-[#573DBB] w-[65%] lg:w-[75%] mx-auto text-center justify-center rounded-xl lg:mx-auto"
           >
             <img
-              class="mx-auto lg:h-[550px] rounded-xl"
+              class="mx-auto lg:h-[550px] object-fit rounded-xl"
               src="./assets/reza.png"
               alt="Profile Picture"
             />
@@ -168,7 +197,7 @@
       <section class="section2 mt-10 mx-auto py-20" id="about">
         <div class="lg:px-24 w-full">
           <h2
-            class="text-center font-['Poppins'] text-white text-3xl font-bold mb-6 relative"
+            class="text-center font-['soehne'] text-white text-4xl font-bold mb-6 relative"
           >
             About Me
             <span
@@ -176,21 +205,21 @@
             ></span>
           </h2>
           <div class="grid lg:grid-cols-2 p-6 gap-12 lg:mt-10">
-            <div class="mx-auto grid place-items-center">
+            <div data-aos="flip-right" class="mx-auto grid place-items-center">
               <img
                 class="rounded-xl"
                 src="./assets/about.jpg"
                 alt="Profile Picture"
               />
             </div>
-            <div class="my-auto grid gap-6 px-10">
-              <p class="text-xl text-white font-serif text-justify">
-                I'm a passionate web developer and designer with a strong focus
-                on creating simple, yet powerful solutions. I'm always looking
-                for new ways to improve my skills and stay up-to-date with the
-                latest trends and technologies.
-              </p>
-            </div>
+            <p
+              class="text-[30px] text-white font-['Roboto'] text-justify my-auto leading-relaxed"
+            >
+              I'm a passionate web developer and designer with a strong focus on
+              creating simple, yet powerful solutions. I'm always looking for
+              new ways to improve my skills and stay up-to-date with the latest
+              trends and technologies.
+            </p>
           </div>
         </div>
       </section>
@@ -198,8 +227,13 @@
       <!-- section3 -->
       <section class="section3 mt-10 py-16 lg:h-screen" id="skills">
         <div class="lg:px-24 px-6">
-          <h2 class="font-['Poppins'] text-3xl font-bold mb-6 relative">
+          <h2
+            class="text-center font-['soehne'] text-white text-4xl font-bold mb-6 relative"
+          >
             My Skills
+            <span
+              class="absolute left-1/2 transform -translate-x-1/2 mt-2 block h-1 w-20 bg-black rounded"
+            ></span>
           </h2>
           <div class="flex items-center mt-6">
             <ul
@@ -238,17 +272,22 @@
 
       <!-- section4 -->
       <section
-        class="section4 lg:px-24 h-full bg-[#573DBB] py-16"
+        class="section4 lg:px-24 h-full bg-[#573DBB] py-16 overflow-x-hidden"
         id="portfolio"
       >
-        <h2 class="text-center text-white text-3xl font-bold mb-6 relative">
+        <h2
+          class="text-center text-white text-3xl font-bold mb-6 relative font-['soehne']"
+        >
           Portofolio
           <span
             class="absolute left-1/2 transform -translate-x-1/2 mt-2 block h-1 w-20 bg-white rounded"
           ></span>
         </h2>
         <div class="lg:grid lg:grid-cols-3 mt-10" id="card-projects">
-          <div class="p-4 flex justify-center items-center relative group">
+          <div
+            data-aos="fade-down-right"
+            class="p-4 flex justify-center items-center relative group"
+          >
             <img
               class="w-[400px] h-[400px] object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-50"
               src="./assets/incentive.png"
@@ -290,7 +329,10 @@
               </a>
             </div>
           </div>
-          <div class="p-4 flex justify-center items-center relative group">
+          <div
+            data-aos="fade-down-left"
+            class="p-4 flex justify-center items-center relative group"
+          >
             <img
               class="w-[400px] h-[400px] object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-50"
               src="./assets/nextflix.png"
@@ -312,7 +354,10 @@
               </a>
             </div>
           </div>
-          <div class="p-4 flex justify-center items-center relative group">
+          <div
+            data-aos="fade-down-right"
+            class="p-4 flex justify-center items-center relative group"
+          >
             <img
               class="w-[400px] h-[400px] object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-50"
               src="./assets/portofolio.png"
@@ -354,7 +399,10 @@
               </a>
             </div>
           </div>
-          <div class="p-4 flex justify-center items-center relative group">
+          <div
+            data-aos="fade-down-left"
+            class="p-4 flex justify-center items-center relative group"
+          >
             <img
               class="w-[400px] h-[400px] object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-50"
               src="./assets/moneta.png"
@@ -437,7 +485,7 @@
       <section class="section5 py-16 h-screen" id="experience">
         <div class="container mx-auto px-6 lg:px-24">
           <h2
-            class="text-center font-['Poppins'] text-white text-3xl font-bold mb-6 relative"
+            class="text-center font-['soehne'] text-white text-3xl font-bold mb-12 relative"
           >
             Work Experience
             <span
@@ -451,11 +499,13 @@
                 class="absolute w-6 h-6 bg-[#573DBB] rounded-full mt-1.5 shadow-[0_0_10px_rgba(87,61,187,0.7)] -left-3.5"
               ></span>
               <div class="flex justify-between items-center mb-1">
-                <h3 class="text-lg font-semibold">PT PHINCON</h3>
+                <h3 class="text-lg font-semibold font-['soehne']">
+                  PT PHINCON
+                </h3>
                 <span class="text-sm font-semibold">Feb 2024 - Aug 2024</span>
               </div>
-              <p class="mb-2">Back End Developer Intern</p>
-              <p>
+              <p class="mb-2 italic">Back End Developer Intern</p>
+              <p class="font-['Roboto']">
                 I have completed key features, including a QA module for admin
                 performance evaluation, a time management system for employee
                 shifts and schedules, a calling list management tool, and a
@@ -469,11 +519,13 @@
                 class="absolute w-6 h-6 bg-[#573DBB] rounded-full mt-1.5 shadow-[0_0_10px_rgba(87,61,187,0.7)] -left-3.5"
               ></span>
               <div class="flex justify-between items-center mb-1">
-                <h3 class="text-lg font-semibold">PT Trans Retail Indonesia</h3>
+                <h3 class="text-lg font-semibold font-['soehne']">
+                  PT Trans Retail Indonesia
+                </h3>
                 <span class="text-sm font-semibold">Aug 2023 - Dec 2023</span>
               </div>
-              <p class="mb-2">Sofware Developer Intern</p>
-              <p>
+              <p class="mb-2 italic">Sofware Developer Intern</p>
+              <p class="font-['Roboto']">
                 I have successfully created a customer data website to record
                 customers, an incentive website for employees, stores, and
                 brands, and a cycle count website to count stock in stores. all
@@ -487,7 +539,7 @@
       <!-- section6 -->
       <section class="section6 lg:px-24 h-full py-16 text-white" id="contact">
         <h2
-          class="text-center font-['Poppins'] text-white text-3xl font-bold mb-6 relative"
+          class="text-center font-['soehne'] text-white text-3xl font-bold mb-6 relative"
         >
           Contact Me
           <span
@@ -516,7 +568,7 @@
             <div class="p-4">
               <i class="fa-solid fa-phone text-3xl"></i>
             </div>
-            <a href="tel:+12015550124" class="text-lg">+62 851 8281 0339</a>
+            <a href="" class="text-lg">+62 851 8281 0339</a>
           </div>
 
           <!-- Location -->
@@ -551,7 +603,10 @@
     <footer class="bg-black text-white text-center py-4">
       <p>&copy; 2024 Fioreza R N. All rights reserved.</p>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="index.js"></script>
   </body>
 </html>

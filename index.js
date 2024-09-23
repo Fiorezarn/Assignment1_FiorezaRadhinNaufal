@@ -48,8 +48,8 @@ const viewMoreBtn = document.getElementById("view-more-btn");
 const hiddenCards = document.querySelectorAll(".additional-card");
 const body = document.body;
 let isExpanded = false;
-
 let lastScrollTop = 0;
+
 window.addEventListener("scroll", function () {
   let scrollTop = document.documentElement.scrollTop;
   const ontop = document.getElementById("on-top");
@@ -84,6 +84,7 @@ backEndBtn.addEventListener("click", () => {
   frontEndBtn.classList.remove("bg-[#573DBB]", "text-white");
 });
 
+// theme button mobile
 themeButtonMobile.addEventListener("click", function () {
   if (body.classList.contains("theme-1")) {
     body.classList.replace("theme-1", "theme-2");
@@ -94,6 +95,7 @@ themeButtonMobile.addEventListener("click", function () {
   }
 });
 
+// theme button desktop
 themeButton.addEventListener("click", function () {
   if (body.classList.contains("theme-1")) {
     body.classList.replace("theme-1", "theme-2");
@@ -104,6 +106,7 @@ themeButton.addEventListener("click", function () {
   }
 });
 
+// view more portofolio
 viewMoreBtn.addEventListener("click", function () {
   if (isExpanded) {
     hiddenCards.forEach((card) => {
@@ -121,24 +124,24 @@ viewMoreBtn.addEventListener("click", function () {
 });
 
 const frontEndList = [
-  { name: "HTML", imgSrc: "./assets/html.png" },
-  { name: "CSS", imgSrc: "./assets/css-3.png" },
-  { name: "JavaScript", imgSrc: "./assets/js.png" },
-  { name: "React", imgSrc: "./assets/react.png" },
-  { name: "Bootstrap", imgSrc: "./assets/bootstrap.png" },
-  { name: "Tailwind", imgSrc: "./assets/tailwind.png" },
-  { name: "SASS", imgSrc: "./assets/sass.png" },
+  { name: "HTML", imgSrc: "/assets/html.png" },
+  { name: "CSS", imgSrc: "/assets/css-3.png" },
+  { name: "JavaScript", imgSrc: "/assets/js.png" },
+  { name: "React", imgSrc: "/assets/react.png" },
+  { name: "Bootstrap", imgSrc: "/assets/bootstrap.png" },
+  { name: "Tailwind", imgSrc: "/assets/tailwind.png" },
+  { name: "SASS", imgSrc: "/assets/sass.png" },
 ];
 
 const backEndList = [
-  { name: "Laravel", imgSrc: "./assets/laravel.png" },
-  { name: "MySQL", imgSrc: "./assets/mysql.png" },
-  { name: "PHP", imgSrc: "./assets/php.png" },
-  { name: "PostgreSQL", imgSrc: "./assets/postgree.png" },
-  { name: "TypeScript", imgSrc: "./assets/typescript.png" },
-  { name: "Oracle", imgSrc: "./assets/oracle.png" },
-  { name: "Node.js", imgSrc: "./assets/nodejs.png" },
-  { name: "Nest.js", imgSrc: "./assets/nest js.png" },
+  { name: "Laravel", imgSrc: "/assets/laravel.png" },
+  { name: "MySQL", imgSrc: "/assets/mysql.png" },
+  { name: "PHP", imgSrc: "/assets/php.png" },
+  { name: "PostgreSQL", imgSrc: "/assets/postgree.png" },
+  { name: "TypeScript", imgSrc: "/assets/typescript.png" },
+  { name: "Oracle", imgSrc: "/assets/oracle.png" },
+  { name: "Node.js", imgSrc: "/assets/nodejs.png" },
+  { name: "Nest.js", imgSrc: "/assets/nest js.png" },
 ];
 
 function showCardSkill(list, idContainer) {
@@ -155,6 +158,8 @@ function showCardSkill(list, idContainer) {
       "items-center",
       "min-w-[200px]"
     );
+
+    techDiv.setAttribute("data-aos", "zoom-in-up");
 
     const img = document.createElement("img");
     img.classList.add("w-20", "h-20");
