@@ -126,7 +126,7 @@ const frontEndList = [
   { name: "JavaScript", imgSrc: "./assets/js.png" },
   { name: "React", imgSrc: "./assets/react.png" },
   { name: "Bootstrap", imgSrc: "./assets/bootstrap.png" },
-  { name: "Tailwind CSS", imgSrc: "./assets/tailwind.png" },
+  { name: "Tailwind", imgSrc: "./assets/tailwind.png" },
   { name: "SASS", imgSrc: "./assets/sass.png" },
 ];
 
@@ -152,7 +152,8 @@ function showCardSkill(list, idContainer) {
       "rounded",
       "flex",
       "flex-col",
-      "items-center"
+      "items-center",
+      "min-w-[200px]"
     );
 
     const img = document.createElement("img");
