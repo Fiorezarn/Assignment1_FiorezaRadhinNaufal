@@ -135,7 +135,7 @@ const frontEndList = [
 
 const backEndList = [
   { name: "Laravel", imgSrc: "./assets/laravel.png" },
-  { name: "MySQL", imgSrc: "./assets/mysql.png" },
+  { name: "MySQL", imgSrc: "./assets/sql.png" },
   { name: "PHP", imgSrc: "./assets/php.png" },
   { name: "PostgreSQL", imgSrc: "./assets/postgree.png" },
   { name: "TypeScript", imgSrc: "./assets/typescript.png" },
