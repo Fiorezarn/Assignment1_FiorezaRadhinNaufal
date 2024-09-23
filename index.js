@@ -124,24 +124,24 @@ viewMoreBtn.addEventListener("click", function () {
 });
 
 const frontEndList = [
-  { name: "HTML", imgSrc: "/assets/html.png" },
-  { name: "CSS", imgSrc: "/assets/css-3.png" },
-  { name: "JavaScript", imgSrc: "/assets/js.png" },
-  { name: "React", imgSrc: "/assets/react.png" },
-  { name: "Bootstrap", imgSrc: "/assets/bootstrap.png" },
-  { name: "Tailwind", imgSrc: "/assets/tailwind.png" },
-  { name: "SASS", imgSrc: "/assets/sass.png" },
+  { name: "HTML", imgSrc: "./assets/html.png" },
+  { name: "CSS", imgSrc: "./assets/css-3.png" },
+  { name: "JavaScript", imgSrc: "./assets/js.png" },
+  { name: "React", imgSrc: "./assets/react.png" },
+  { name: "Bootstrap", imgSrc: "./assets/bootstrap.png" },
+  { name: "Tailwind", imgSrc: "./assets/tailwind.png" },
+  { name: "SASS", imgSrc: "./assets/sass.png" },
 ];
 
 const backEndList = [
-  { name: "Laravel", imgSrc: "/assets/laravel.png" },
-  { name: "MySQL", imgSrc: "/assets/mysql.png" },
-  { name: "PHP", imgSrc: "/assets/php.png" },
-  { name: "PostgreSQL", imgSrc: "/assets/postgree.png" },
-  { name: "TypeScript", imgSrc: "/assets/typescript.png" },
-  { name: "Oracle", imgSrc: "/assets/oracle.png" },
-  { name: "Node.js", imgSrc: "/assets/nodejs.png" },
-  { name: "Nest.js", imgSrc: "/assets/nest js.png" },
+  { name: "Laravel", imgSrc: "./assets/laravel.png" },
+  { name: "MySQL", imgSrc: "./assets/mysql.png" },
+  { name: "PHP", imgSrc: "./assets/php.png" },
+  { name: "PostgreSQL", imgSrc: "./assets/postgree.png" },
+  { name: "TypeScript", imgSrc: "./assets/typescript.png" },
+  { name: "Oracle", imgSrc: "./assets/oracle.png" },
+  { name: "Node.js", imgSrc: "./assets/nodejs.png" },
+  { name: "Nest.js", imgSrc: "./assets/nest js.png" },
 ];
 
 function showCardSkill(list, idContainer) {
