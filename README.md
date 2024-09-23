@@ -21,8 +21,7 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 
 ## How to Run Locally
 
-- Clone the repository:
-- git clone https://github.com/Fiorezarn/Assignment1_FiorezaRadhinNaufal.git
+- Clone the repository: git clone https://github.com/Fiorezarn/Assignment1_FiorezaRadhinNaufal.git
 - Navigate to the project directory:
 - cd portfolio-website
 - Open index.html in your browser to view the website locally.
