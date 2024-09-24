@@ -1,5 +1,6 @@
 # Portofolio Website
-
+[UIWEBSITE](https://github.com/Fiorezarn/Assignment1_FiorezaRadhinNaufal/blob/main/assets/uiwebsite.png)
+https://github.com/Fiorezarn/Assignment1_FiorezaRadhinNaufal/blob/main/assets/uiwebsite.png
 This is my personal portfolio website showcasing my projects, skills, and experience. It was built to highlight my journey as a developer, demonstrate my proficiency in web development, and serve as a platform for future employers or collaborators to connect with me.
 
 ## Features
