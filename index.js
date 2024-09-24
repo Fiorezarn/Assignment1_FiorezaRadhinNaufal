@@ -16,8 +16,8 @@ function toggleMenu() {
 }
 
 document.addEventListener("click", function (event) {
-  var menu = document.getElementById("menu");
-  var isMenuButton = event.target.closest("button");
+  let menu = document.getElementById("menu");
+  let isMenuButton = event.target.closest("button");
 
   if (
     !menu.contains(event.target) &&
@@ -31,7 +31,7 @@ document.addEventListener("click", function (event) {
 // Close menu on window resize
 window.addEventListener("resize", function () {
   if (window.innerWidth >= 1024) {
-    var menu = document.getElementById("menu");
+    let menu = document.getElementById("menu");
     if (menu.classList.contains("translate-x-0")) {
       toggleMenu();
     }

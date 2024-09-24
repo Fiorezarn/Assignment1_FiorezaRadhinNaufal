@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Fioreza R N" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Portfolio Reza</title>
@@ -17,7 +18,7 @@
     <link rel="stylesheet" href="theme.css" />
   </head>
   <body class="theme-1">
-    <header class="mx-auto lg:px-24 p-4" id="top">
+    <header class="mx-auto lg:px-24 p-4">
       <nav
         class="flex items-center justify-between px-8 py-4 lg:p-4 rounded-full lg:rounded-full"
       >
@@ -27,7 +28,7 @@
         >
           <li>
             <a
-              href="#top"
+              href="#home"
               class="text-lg text-white font-bold hover:bg-[#112D4E] duration-300 px-6 py-4 rounded-full"
               >Home</a
             >
@@ -79,40 +80,53 @@
           id="menu"
         >
           <ul>
-            <li
-              class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
-            >
-              <a href="#top" class="font-bold text-white">Home</a>
-            </li>
-            <li
-              class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
-            >
-              <a href="#about" class="font-bold text-white">About</a>
-            </li>
-            <li
-              class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
-            >
-              <a href="#experience" class="font-bold text-white">Experience</a>
-            </li>
+            <a href="#home">
+              <li
+                class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600 text-center"
+              >
+                <span class="font-bold text-white">Home</span>
+              </li>
+            </a>
+            <a href="#about">
+              <li
+                class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600 text-center"
+              >
+                <span class="font-bold text-white">About</span>
+              </li>
+            </a>
+            <a href="#experience">
+              <li
+                class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600 text-center"
+              >
+                <span class="font-bold text-white">Experience</span>
+              </li>
+            </a>
           </ul>
           <ul>
-            <li
-              class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
-            >
-              <a href="#portfolio" class="font-bold text-white">Portofolio</a>
-            </li>
-            <li
-              class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
-            >
-              <a href="#contact" class="font-bold text-white">Contact</a>
-            </li>
-            <li
-              class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600"
-            >
-              <a href="#skills" class="font-bold text-white">Skills</a>
-            </li>
+            <a href="#portfolio">
+              <li
+                class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600 text-center"
+              >
+                <span class="font-bold text-white">Portfolio</span>
+              </li>
+            </a>
+            <a href="#contact">
+              <li
+                class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600 text-center"
+              >
+                <span class="font-bold text-white">Contact</span>
+              </li>
+            </a>
+            <a href="#skills">
+              <li
+                class="p-4 border-b border-white rounded-xl hover:bg-[#112D4E] duration-300 hover:text-black cursor-pointer border-gray-600 text-center"
+              >
+                <span class="font-bold text-white">Skills</span>
+              </li>
+            </a>
           </ul>
         </div>
+
         <button id="theme-button-mobile" class="text-2xl font-bold lg:hidden">
           <img src="./assets/darkicon.svg" class="w-8 h-8" alt="darkicon" />
         </button>
@@ -135,12 +149,12 @@
         class="bg-[#bcb1e4] rounded-full fixed z-[9999] right-4 bottom-6 p-2 hidden"
         id="on-top"
       >
-        <a href="#top">
+        <a href="#home">
           <i class="fa-solid fa-jet-fighter-up text-white text-2xl"></i>
         </a>
       </div>
       <!-- section1 -->
-      <section class="section1 lg:px-24 lg:py-16">
+      <section class="section1 lg:px-24 lg:py-16" id="home">
         <div
           class="lg:grid lg:grid-cols-2 flex flex-col items-center justify-center h-full"
         >
@@ -162,12 +176,15 @@
             <div class="mt-4 flex gap-2 lg:mx-0">
               <a
                 class="btn-about text-white px-5 py-2 rounded-md font-bold"
-                href="/about"
+                href="#about"
                 >About</a
               >
               <a
                 class="bg-[#573DBB] text-white px-5 py-2 rounded-md font-bold"
-                href="/cv"
+                href="./assets/resume-reza.pdf"
+                download="fioreza-resume"
+                target="_blank"
+                rel="noreferrer"
                 >Download CV</a
               >
             </div>
