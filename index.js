@@ -123,6 +123,7 @@ viewMoreBtn.addEventListener("click", function () {
   isExpanded = !isExpanded;
 });
 
+// card front end skill
 const frontEndList = [
   { name: "HTML", imgSrc: "./assets/html.png" },
   { name: "CSS", imgSrc: "./assets/css-3.png" },
@@ -133,6 +134,7 @@ const frontEndList = [
   { name: "SASS", imgSrc: "./assets/sass.png" },
 ];
 
+// card back end skill
 const backEndList = [
   { name: "Laravel", imgSrc: "./assets/laravel.png" },
   { name: "MySQL", imgSrc: "./assets/sql.png" },
