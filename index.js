@@ -42,8 +42,7 @@ const frontEndBtn = document.getElementById("frontEndBtn");
 const backEndBtn = document.getElementById("backEndBtn");
 const frontEnd = document.getElementById("front-end");
 const backEnd = document.getElementById("back-end");
-const themeButton = document.getElementById("theme-button");
-const themeButtonMobile = document.getElementById("theme-button-mobile");
+const themeButtons = document.querySelectorAll(".theme-button");
 const viewMoreBtn = document.getElementById("view-more-btn");
 const hiddenCards = document.querySelectorAll(".additional-card");
 const body = document.body;
@@ -84,26 +83,27 @@ backEndBtn.addEventListener("click", () => {
   frontEndBtn.classList.remove("bg-[#573DBB]", "text-white");
 });
 
-// theme button mobile
-themeButtonMobile.addEventListener("click", function () {
-  if (body.classList.contains("theme-1")) {
-    body.classList.replace("theme-1", "theme-2");
-    this.innerHTML = `<img src="./assets/lighticon.svg" class="w-8 h-8" alt="lighticon" />`;
-  } else {
-    body.classList.replace("theme-2", "theme-1");
-    this.innerHTML = `<img src="./assets/darkicon.svg" class="w-8 h-8" alt="darkicon" />`;
-  }
-});
+function updateThemeIcon() {
+  themeButtons.forEach((button) => {
+    if (body.classList.contains("theme-1")) {
+      button.innerHTML = `<img src="./assets/darkicon.svg" class="w-8 h-8" alt="darkicon" />`;
+    } else {
+      button.innerHTML = `<img src="./assets/lighticon.svg" class="w-8 h-8" alt="lighticon" />`;
+    }
+  });
+}
 
-// theme button desktop
-themeButton.addEventListener("click", function () {
-  if (body.classList.contains("theme-1")) {
-    body.classList.replace("theme-1", "theme-2");
-    this.innerHTML = `<img src="./assets/lighticon.svg" class="w-8 h-8" alt="lighticon" />`;
-  } else {
-    body.classList.replace("theme-2", "theme-1");
-    this.innerHTML = `<img src="./assets/darkicon.svg" class="w-8 h-8" alt="darkicon" />`;
-  }
+updateThemeIcon();
+
+themeButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    if (body.classList.contains("theme-1")) {
+      body.classList.replace("theme-1", "theme-2");
+    } else {
+      body.classList.replace("theme-2", "theme-1");
+    }
+    updateThemeIcon();
+  });
 });
 
 // view more portofolio
