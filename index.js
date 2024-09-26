@@ -1,3 +1,15 @@
+const frontEndBtn = document.getElementById("frontEndBtn");
+const backEndBtn = document.getElementById("backEndBtn");
+const frontEnd = document.getElementById("front-end");
+const backEnd = document.getElementById("back-end");
+const themeButtons = document.querySelectorAll(".theme-button");
+const viewMoreBtn = document.getElementById("view-more-btn");
+const hiddenCards = document.querySelectorAll(".additional-card");
+const body = document.body;
+let isExpanded = false;
+let lastScrollTop = 0;
+
+// hamburger menu
 function toggleMenu() {
   const menu = document.getElementById("menu");
   const icon = document.getElementById("icon-menu");
@@ -15,6 +27,7 @@ function toggleMenu() {
   }
 }
 
+// Close menu on click
 document.addEventListener("click", function (event) {
   let menu = document.getElementById("menu");
   let isMenuButton = event.target.closest("button");
@@ -38,17 +51,7 @@ window.addEventListener("resize", function () {
   }
 });
 
-const frontEndBtn = document.getElementById("frontEndBtn");
-const backEndBtn = document.getElementById("backEndBtn");
-const frontEnd = document.getElementById("front-end");
-const backEnd = document.getElementById("back-end");
-const themeButtons = document.querySelectorAll(".theme-button");
-const viewMoreBtn = document.getElementById("view-more-btn");
-const hiddenCards = document.querySelectorAll(".additional-card");
-const body = document.body;
-let isExpanded = false;
-let lastScrollTop = 0;
-
+// navigation on top
 window.addEventListener("scroll", function () {
   let scrollTop = document.documentElement.scrollTop;
   const ontop = document.getElementById("on-top");
@@ -83,6 +86,7 @@ backEndBtn.addEventListener("click", () => {
   frontEndBtn.classList.remove("bg-[#573DBB]", "text-white");
 });
 
+// change theme icon
 function updateThemeIcon() {
   themeButtons.forEach((button) => {
     if (body.classList.contains("theme-1")) {
@@ -95,6 +99,7 @@ function updateThemeIcon() {
 
 updateThemeIcon();
 
+// change theme
 themeButtons.forEach((button) => {
   button.addEventListener("click", function () {
     if (body.classList.contains("theme-1")) {
@@ -146,6 +151,7 @@ const backEndList = [
   { name: "Nest.js", imgSrc: "./assets/nest js.png" },
 ];
 
+// function show card skills
 function showCardSkill(list, idContainer) {
   const container = document.getElementById(idContainer);
   list.forEach((tech) => {
