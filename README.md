@@ -13,7 +13,7 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 - Theme Toggle: Allows users to switch between light and dark modes by clicking on the theme button.
 - Portfolio: Showcases the projects I have worked on.
 - Contact: Contains contact information and a form for reaching out.
-- Skills: Highlights my technical and soft skills.
+- Skills: Highlights my technical skills as a web developer.
 
 ## Tech Stack
 
@@ -27,5 +27,5 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 ## How to Run Locally
 
 - Clone the repository: git clone https://github.com/Fiorezarn/Assignment1_FiorezaRadhinNaufal.git
-- cd portfolio-website
+- cd Assignment1_FiorezaRadhinNaufal
 - Open index.html in your browser to view the website locally.
