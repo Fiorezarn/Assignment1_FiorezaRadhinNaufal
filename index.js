@@ -4,37 +4,35 @@ const frontEnd = document.getElementById("front-end");
 const backEnd = document.getElementById("back-end");
 const themeButtons = document.querySelectorAll(".theme-button");
 const viewMoreBtn = document.getElementById("view-more-btn");
-const hiddenCards = document.querySelectorAll(".additional-card");
 const body = document.body;
-let isExpanded = false;
 let lastScrollTop = 0;
+let menu = document.getElementById("menu");
+let menuButton = document.getElementById("icon-menu");
 
 // hamburger menu
 function toggleMenu() {
-  const menu = document.getElementById("menu");
-  const icon = document.getElementById("icon-menu");
-
   if (menu.classList.contains("-translate-x-full")) {
     menu.classList.replace("-translate-x-full", "translate-x-0");
 
-    icon.classList.replace("fa-bars", "fa-x");
-    icon.classList.add("rotate-180");
+    menuButton.classList.replace("fa-bars", "fa-x");
+    menuButton.classList.add("rotate-180");
   } else {
     menu.classList.replace("translate-x-0", "-translate-x-full");
 
-    icon.classList.replace("fa-x", "fa-bars");
-    icon.classList.remove("rotate-180");
+    menuButton.classList.replace("fa-x", "fa-bars");
+    menuButton.classList.remove("rotate-180");
   }
 }
 
 // Close menu on click
 document.addEventListener("click", function (event) {
-  let menu = document.getElementById("menu");
-  let isMenuButton = event.target.closest("button");
+  let isMenuButton = menuButton.contains(event.target); // Check if the click is from the menu button
+  let isMenuLink = menu.contains(event.target); // Check if the click is from a link inside the menu
 
+  // If the click is not on the menu button or a menu link, and the menu is open, close it
   if (
-    !menu.contains(event.target) &&
     !isMenuButton &&
+    !isMenuLink &&
     menu.classList.contains("translate-x-0")
   ) {
     toggleMenu();
@@ -44,7 +42,6 @@ document.addEventListener("click", function (event) {
 // Close menu on window resize
 window.addEventListener("resize", function () {
   if (window.innerWidth >= 1024) {
-    let menu = document.getElementById("menu");
     if (menu.classList.contains("translate-x-0")) {
       toggleMenu();
     }
@@ -53,7 +50,9 @@ window.addEventListener("resize", function () {
 
 // navigation on top
 window.addEventListener("scroll", function () {
+  // Get the current vertical scroll position of the document
   let scrollTop = document.documentElement.scrollTop;
+
   const ontop = document.getElementById("on-top");
 
   if (scrollTop > 300) {
@@ -61,18 +60,17 @@ window.addEventListener("scroll", function () {
   } else {
     ontop.classList.add("hidden");
   }
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
 frontEndBtn.addEventListener("click", () => {
   frontEnd.classList.remove("hidden");
   backEnd.classList.add("hidden");
 
-  frontEndBtn.classList.add("bg-[#573DBB]", "text-white");
   frontEndBtn.classList.remove("bg-gray-100", "text-gray-500");
+  frontEndBtn.classList.add("bg-[#573DBB]", "text-white");
 
-  backEndBtn.classList.add("bg-gray-100", "text-gray-500");
   backEndBtn.classList.remove("bg-[#573DBB]", "text-white");
+  backEndBtn.classList.add("bg-gray-100", "text-gray-500");
 });
 
 backEndBtn.addEventListener("click", () => {
@@ -86,33 +84,23 @@ backEndBtn.addEventListener("click", () => {
   frontEndBtn.classList.remove("bg-[#573DBB]", "text-white");
 });
 
-// change theme icon
-function updateThemeIcon() {
-  themeButtons.forEach((button) => {
-    if (body.classList.contains("theme-1")) {
-      button.innerHTML = `<img src="./assets/darkicon.svg" class="w-8 h-8" alt="darkicon" />`;
-    } else {
-      button.innerHTML = `<img src="./assets/lighticon.svg" class="w-8 h-8" alt="lighticon" />`;
-    }
-  });
-}
-
-updateThemeIcon();
-
 // change theme
 themeButtons.forEach((button) => {
   button.addEventListener("click", function () {
     if (body.classList.contains("theme-1")) {
       body.classList.replace("theme-1", "theme-2");
+      button.innerHTML = `<img src="./assets/lighticon.svg" class="w-8 h-8" alt="lighticon" />`;
     } else {
       body.classList.replace("theme-2", "theme-1");
+      button.innerHTML = `<img src="./assets/darkicon.svg" class="w-8 h-8" alt="darkicon" />`;
     }
-    updateThemeIcon();
   });
 });
 
 // view more portofolio
+let isExpanded = false;
 viewMoreBtn.addEventListener("click", function () {
+  const hiddenCards = document.querySelectorAll(".additional-card");
   if (isExpanded) {
     hiddenCards.forEach((card) => {
       card.classList.add("hidden");
@@ -124,7 +112,6 @@ viewMoreBtn.addEventListener("click", function () {
     });
     this.textContent = "View Less";
   }
-
   isExpanded = !isExpanded;
 });
 
