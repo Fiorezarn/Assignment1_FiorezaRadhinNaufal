@@ -173,3 +173,42 @@ function showCardSkill(list, idContainer) {
 
 showCardSkill(frontEndList, "front-end");
 showCardSkill(backEndList, "back-end");
+
+// Esri Map
+require([
+  "esri/Map",
+  "esri/views/MapView",
+  "esri/Graphic",
+  "esri/symbols/PictureMarkerSymbol",
+], (Map, MapView, Graphic, PictureMarkerSymbol) => {
+  const map = new Map({
+    basemap: "topo-vector",
+  });
+
+  let symbol = {
+    type: "picture-marker",
+    url: "https://static.arcgis.com/images/Symbols/Shapes/BlackStarLargeB.png",
+    width: "64px",
+    height: "64px",
+  };
+
+  const point = {
+    type: "point",
+    longitude: 106.7805826,
+    latitude: -6.2427068,
+  };
+
+  const graphic = new Graphic({
+    geometry: point,
+    symbol: symbol,
+  });
+
+  const view = new MapView({
+    container: "viewDiv",
+    map: map,
+    zoom: 16,
+    center: [106.7805826, -6.2427068],
+  });
+
+  view.graphics.add(graphic);
+});
